@@ -1,0 +1,25 @@
+{
+  "name": "portfolio-1",
+  "version": "1.0.0",
+  "description": "試作用ポートフォリオ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zaki358/Portfolio-1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zaki358/Portfolio-1/issues"
+  },
+  "homepage": "https://github.com/zaki358/Portfolio-1#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.50.0"
+  }
+}
