@@ -6,27 +6,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="portfolio">
+    <title>portfolio</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <title>portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r127/three.min.js"></script>
     <script src="../script/main.js"></script>
 </head>
 
 <body>
     <header id="l-header">
-        <p class="p-top">
-            <img src="" class="p-top__logo c-logo--top" alt="ロゴ用画像">
+        <p class="p-header">
+            <img src="" class="p-header__logo c-logo--top" alt="ロゴ用画像">
         </p>
     </header>
 
     <main id="l-main">
-        <div class="p-container">
-            
+        <canvas class="p-canvas" id="canvas"></canvas>
+        <div class="p-wrapper">
+            <div class="p-wrapper__layer c-layer-main"></div>
+            <div class="p-wrapper__body">
+                <section class="p-area">
+                    <div class="p-area__round"></div>
+                    <div class="p-area__primary"></div>
+                    <div class="p-area__menu--fornt">
+                        <ul class="p-area__list--front">
+                            <li><a href="">己</a></li>
+                            <li><a href="">力</a></li>
+                            <li><a href="">仕</a></li>
+                        </ul>
+                    </div>
+                    <p></p>
+                </section>
+            </div>
+            <div class="wrapper__foot">
+                <ul class="p-wrapper__list">
+                    <li><a href="">contact</a></li>
+                    <li><a href="">price</a></li>
+                </ul>
+            </div>
         </div>
     </main>
-
 </body>
-
 </html>
