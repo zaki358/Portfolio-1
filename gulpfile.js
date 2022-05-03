@@ -2,32 +2,23 @@
 // Sassをコンパイルするプラグインの読み込み
 // webpackをコンパイルするプラグインの読み込み
 // webpackの設定ファイルの読み込み
+// autoprefixerの読みこみ
 const gulp = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
 const webpackStream = require("webpack-stream");
 const webpack = require("webpack");
 const webpackConfig = require("./webpack.config");
+const autoprefixer = require('gulp-autoprefixer');
 
-// style.scssの監視タスクを作成する
+//style.scssの監視タスクを作成する
 gulp.task("default", function () {
-    // ★ style.scssファイルを監視
     return gulp.watch("css/style.scss", function () {
-        // style.scssの更新があった場合の処理
-
-        // style.scssファイルを取得
-        return (
-            gulp
-                .src("css/style.scss")
-                // Sassのコンパイルを実行
-                .pipe(
-                    sass({
-                        outputStyle: "expanded"
-                    })
-                        // Sassのコンパイルエラーを表示
-                        // (これがないと自動的に止まってしまう)
-                        .on("error", sass.logError)
-                )
-                // cssフォルダー以下に保存
+        return (gulp.src("css/style.scss")
+                .pipe(sass({outputStyle: "expanded"}).on("error", sass.logError))
+                .pipe(autoprefixer({  //autoprefixerの実行
+                    browsers: ["last 2 versions"],
+                    cascade: false
+                }))  
                 .pipe(gulp.dest("css"))
         );
     });

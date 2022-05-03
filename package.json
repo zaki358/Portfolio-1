@@ -18,10 +18,14 @@
   },
   "homepage": "https://github.com/zaki358/Portfolio-1#readme",
   "devDependencies": {
+    "@types/superagent": "^4.1.15",
     "gulp": "^4.0.2",
     "gulp-sass": "^5.1.0",
     "sass": "^1.50.0",
     "webpack": "^5.72.0",
     "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "gulp-autoprefixer": "^8.0.0"
   }
 }
