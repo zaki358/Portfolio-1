@@ -88,7 +88,12 @@ a {
 }
 
 #l-container {
-  background-color: #740A00;
+  height: 1080px;
+  width: 1920px;
+  background-image: url(../../images/container_background-image-pc.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 #l-header {
@@ -97,6 +102,6 @@ a {
 }
 
 #l-main {
-  height: 1920px;
-  width: 1080px;
+  height: 100%;
+  width: 100%;
 }
