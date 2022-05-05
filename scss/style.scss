@@ -7,6 +7,8 @@
 @use "foundation/base";
 // ==========================================================================
 // Layout
+@use "layout/header" as layout;
+@use "layout/main";
 // ==========================================================================
 
 
@@ -20,7 +22,7 @@
 // -----------------------------------------------------------------
 // project
 // -----------------------------------------------------------------
-@use "object/project/header";
+@use "object/project/header"as project;
 @use "object/project/wrapper";
 @use "object/project/area";
 @use "object/project/canvas";

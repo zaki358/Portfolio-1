@@ -86,4 +86,17 @@ li {
 a {
   text-decoration: none;
 }
-/*# sourceMappingURL=style.css.map */
+
+body {
+  background-color: #740A00;
+}
+
+#l-header {
+  width: 100%;
+  height: 104px;
+}
+
+#l-main {
+  height: 1920px;
+  width: 1080px;
+}
