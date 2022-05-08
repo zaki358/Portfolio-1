@@ -32,3 +32,18 @@
         </div>
     </main>
 </body>
+
+
+<section class="p-area">
+                        <div class="p-area__round"></div>
+                        <h2 class="p-area__title c-title__front"></h2>
+                        <div class="p-area__primary--power c-circle__primary">
+                            <h3 class="c-menu__area"><a href="">力</a></h3>
+                        </div>
+                        <div class="p-area__primary--skill c-circle__primary">
+                            <h3 class="c-menu__area"><a href=""></a>技</a></h3>
+                        </div>
+                        <div class="p-area__primary--work c-circle__primary">
+                            <h3 class="c-menu__area"><a href=""></a>仕</a></h3>
+                        </div>
+                    </section>

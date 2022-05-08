@@ -21,7 +21,10 @@
 // -----------------------------------------------------------------
 @use "object/component/circle";
 @use "object/component/list";
-@use "object/component/menu";
+@use "object/component/layer";
+@use "object/component/logo";
+@use "object/component/scroll";
+//@use "object/component/menu";
 
 // -----------------------------------------------------------------
 // project
@@ -29,7 +32,7 @@
 @use "object/project/header"as project;
 @use "object/project/wrapper";
 @use "object/project/area";
-@use "object/project/canvas";
+//@use "object/project/canvas";
 
 // -----------------------------------------------------------------
 // utility
