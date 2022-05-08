@@ -2,7 +2,7 @@
 // Sassをコンパイルするプラグインの読み込み
 // webpackをコンパイルするプラグインの読み込み
 // webpackの設定ファイルの読み込み
-// autoprefixerの読みこみ
+// autoprefixerの読み込み
 const gulp = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
 const webpackStream = require("webpack-stream");

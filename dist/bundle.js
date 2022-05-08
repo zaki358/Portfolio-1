@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",(()=>{let n=window.innerWidth,e=window.innerHeight;console.log(n),console.log(e)}));
