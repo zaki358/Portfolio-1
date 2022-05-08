@@ -1,7 +1,29 @@
 @use "variables";
+
 //---レスポンシブ用（pcは初期値）---//
 @mixin media($breakpoint: pc) {
     @media #{map-get(variables.$breakpoints, $breakpoint)} {
         @content;
     }
 }
+
+@mixin minchoRed {
+    font-family: Shippori+Mincho;
+    color: $red;
+}
+
+@mixin minchoShuan {
+    font-family: Shippori+Mincho;
+    color: $shuan;
+}
+
+@mixin minchoWhite {
+    font-family: Shippori+Mincho;
+    color: $white;
+}
+
+
+//400;500;600;700
+//@include minchoRed;
+//@include minchoShuan;
+//@include minchoWhite;
