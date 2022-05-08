@@ -1,4 +1,4 @@
-//---レスポンシブ---//
+//ブレイクポイント定義（Map型)
 $breakpoints: (
     "tab": "screen and (min-width: 600px)",
     "pc": "screen and (min-width: 1025px)",
@@ -6,6 +6,6 @@ $breakpoints: (
     "sp": "screen and (max-width: 599px)",
 ) !default;
 
-$spWidth  : 375;
-$tabWidth : 834;
-$pcWidth  : 1920;
+// $spWidth  : 375;
+// $tabWidth : 834;
+// $pcWidth  : 1920;

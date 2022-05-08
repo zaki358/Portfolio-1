@@ -1,1 +1,1 @@
-document.addEventListener("DOMContentLoaded",(()=>{let n=window.innerWidth,e=window.innerHeight;console.log(n),console.log(e)}));
+window.addEventListener("resize",(()=>{let e=window.innerWidth,n=window.innerHeight;const t=document.querySelector("#l-container");t.style.width=e+"px",t.style.height=n+"px"}));

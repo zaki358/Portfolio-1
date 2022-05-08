@@ -1,7 +1,7 @@
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener('resize', () => {
     let window_w = window.innerWidth;
     let window_h = window.innerHeight;
-
-    console.log(window_w);
-    console.log(window_h);
+    const container = document.querySelector("#l-container");
+    container.style.width = window_w + "px";
+    container.style.height = window_h + "px";
 });

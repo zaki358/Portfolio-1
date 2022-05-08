@@ -87,6 +87,15 @@ a {
   text-decoration: none;
 }
 
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  min-width: 375px;
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+}
+
 #l-container {
   height: 1080px;
   width: 1920px;
@@ -97,11 +106,5 @@ a {
 }
 
 #l-header {
-  width: 100%;
   height: 104px;
-}
-
-#l-main {
-  height: 100%;
-  width: 100%;
 }
