@@ -9,7 +9,7 @@ const webpack = require("webpack");
 const webpackConfig = require("./webpack.config");
 
 //関数定義
-function compile(done) {
+const compileSass = done => {
     src("./sass/**/*.scss")
         .pipe(sassGlob())
         .pipe(sass())
@@ -18,14 +18,23 @@ function compile(done) {
     done();
 }
 
-exports.compile = series(compile);
-
-// webpackのタスクの定義。
-gulp.task("default", () => {
-    //webpackStreamの第2引数にwebpackを渡す
+// webpack
+const bundleJs = () => {
+    // webpackStreamの第2引数にwebpackを渡す
     return webpackStream(webpackConfig, webpack)
-        .pipe(gulp.dest("dist"));
-});
+      .pipe(dest("dist"));
+  };
+
+exports.default = series(
+    parallel(compileSass,bundleJs)
+);
+
+// // webpackのタスクの定義。
+// gulp.task("default", () => {
+//     //webpackStreamの第2引数にwebpackを渡す
+//     return webpackStream(webpackConfig, webpack)
+//         .pipe(gulp.dest("dist"));
+// });
 
 //後ほど削除↓
 // //style.scssの監視タスクを作成する
