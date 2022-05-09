@@ -1,6 +1,7 @@
 //1rem→10px
 :root {
 	font-size: 62.5%;
+	color: #ffffff;
 }
 
 li {
@@ -9,7 +10,15 @@ li {
 
 a {
 	text-decoration: none;
+	color: #ffffff;
+	&:active{
+		color: #ffffff;
+	}
+	&:focus{
+		outline: none;
+	}
 }
+
 
 body {
 	overflow-x: hidden;

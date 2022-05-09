@@ -1,1 +1,7 @@
 @use "../../foundation/_mixin.scss";
+
+.c-font__footer {
+    @include mixin.minchoRed;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
