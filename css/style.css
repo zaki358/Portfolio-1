@@ -2,7 +2,8 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /* Remove default margin */
@@ -71,7 +72,8 @@ select {
             animation-duration: 0.01ms !important;
     -webkit-animation-iteration-count: 1 !important;
             animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
 }
@@ -115,9 +117,12 @@ body {
   height: 104px;
 }
 
-.c-scroll {
-  font-family: "Shippori Mincho", serif;
-  color: #D20A13;
+#l-main {
+  height: 100%;
+  width: 100%;
+  font-size: large;
+  font-weight: 100;
+  color: red;
 }
 
 .c-font__footer {
@@ -125,4 +130,9 @@ body {
   color: #D20A13;
   font-size: 1.6rem;
   font-weight: 500;
+}
+
+.c-scroll {
+  font-family: "Shippori Mincho", serif;
+  color: #D20A13;
 }

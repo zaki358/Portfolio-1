@@ -4,6 +4,7 @@ window.addEventListener('resize', () => {
     const container = document.querySelector("#l-container");
     container.style.width = window_w + "px";
     container.style.height = window_h + "px";
+    console.log(window_h);
 });
 
 

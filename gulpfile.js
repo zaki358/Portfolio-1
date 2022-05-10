@@ -1,20 +1,21 @@
 //モジュールの読み込み
 const gulp = require("gulp");
-const { src, dest, watch, series, parallel } = require("gulp");
+const { src, dest, parallel, series } = require("gulp");
 const sassGlob = require("gulp-sass-glob-use-forward");
-const sass = require('gulp-sass')(require('sass'));
+const sass = require('gulp-sass')(require('sass')); //
 const autoprefixer = require("gulp-autoprefixer");
+
 const webpackStream = require("webpack-stream");
 const webpack = require("webpack");
 const webpackConfig = require("./webpack.config");
 
 //関数定義
 const compileSass = done => {
-    src("./sass/**/*.scss")
+    src("scss/**/**.scss")
         .pipe(sassGlob())
         .pipe(sass())
         .pipe(autoprefixer())
-        .pipe(dest("./css"));
+        .pipe(dest("css"));
     done();
 }
 
@@ -22,12 +23,20 @@ const compileSass = done => {
 const bundleJs = () => {
     // webpackStreamの第2引数にwebpackを渡す
     return webpackStream(webpackConfig, webpack)
-      .pipe(dest("dist"));
-  };
+        .pipe(dest("dist"));
+};
 
-exports.default = series(
-    parallel(compileSass,bundleJs)
-);
+exports.default = parallel(compileSass, bundleJs);
+
+
+
+
+
+
+
+
+
+
 
 // // webpackのタスクの定義。
 // gulp.task("default", () => {
