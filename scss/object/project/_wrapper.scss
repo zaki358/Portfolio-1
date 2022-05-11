@@ -1,5 +1,13 @@
 @use "../../foundation/_mixin.scss";
 
 .p-wrapper {
-    //margin-top: 104px;
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }

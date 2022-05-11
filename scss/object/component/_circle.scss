@@ -1,3 +1,11 @@
 //円のレイアウト
 @use "../../foundation/_mixin.scss";
 
+.c-circle__principal {
+    width        : 70vh;
+    height       : 70vh;
+    box-sizing   : border-box;
+    border       : #000000 5px solid;
+    border-radius: 35vh;
+    background-color: #000000;
+}
