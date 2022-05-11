@@ -117,12 +117,9 @@ body {
   height: 104px;
 }
 
-#l-main {
-  height: 100%;
-  width: 100%;
-  font-size: large;
-  font-weight: 100;
-  color: red;
+.c-scroll {
+  font-family: "Shippori Mincho", serif;
+  color: #D20A13;
 }
 
 .c-font__footer {
@@ -130,9 +127,4 @@ body {
   color: #D20A13;
   font-size: 1.6rem;
   font-weight: 500;
-}
-
-.c-scroll {
-  font-family: "Shippori Mincho", serif;
-  color: #D20A13;
 }
