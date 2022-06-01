@@ -1,17 +1,44 @@
 //円のレイアウト
 @use "../../foundation/_mixin.scss";
+@use "../../foundation/_variables.scss";
 
-.c-circle__principal {
-    width        : 70vh;
-    height       : 70vh;
-    box-sizing   : border-box;
-    border       : #000000 5px solid;
-    border-radius: 35vh;
+.c-circle {
+   &__main {
+      width           : 28vh;
+      height          : 28vh;
+      border          : variables.$mainColor 2px solid;
+      border-radius   : 50%;
+      background-color: rgba($color: variables.$black, $alpha: 0.9);
+   }
+
+   &__principal {
+      width        : 70vh;
+      height       : 70vh;
+      box-sizing   : border-box;
+      border       : #000000 2px solid;
+      border-radius: 35vh;
+   }
+
+   &__menu {
+      @extend .c-circle__main;
+      width : 14vh;
+      height: 14vh;
+   }
 }
 
-.c-circle__menu {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background: #E74C3C;
-}
+
+
+// .c-circle__principal {
+//    width        : 70vh;
+//    height       : 70vh;
+//    box-sizing   : border-box;
+//    border       : #000000 5px solid;
+//    border-radius: 35vh;
+// }
+
+// .c-circle__menu {
+//    width: 150px;
+//    height: 150px;
+//    border-radius: 50%;
+//    background: #E74C3C;
+// }

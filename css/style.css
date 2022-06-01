@@ -122,20 +122,24 @@ body {
   height: 70px;
 }
 
+.c-circle__main, .c-circle__menu {
+  width: 28vh;
+  height: 28vh;
+  border: #740A00 2px solid;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
 .c-circle__principal {
   width: 70vh;
   height: 70vh;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: #000000 5px solid;
+  border: #000000 2px solid;
   border-radius: 35vh;
 }
-
 .c-circle__menu {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  background: #E74C3C;
+  width: 14vh;
+  height: 14vh;
 }
 
 .c-scroll {
@@ -178,8 +182,20 @@ body {
 .p-area {
   position: relative;
 }
-.p-area__rotate {
+.p-area ul {
+  margin: 0;
+}
+.p-area__main {
   position: absolute;
-  top: 140px;
-  left: 140px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  line-height: 300px;
+}
+.p-area__rotate, .p-area__rotate--lv3, .p-area__rotate--lv2 {
+  position: absolute;
+  text-align: center;
+  line-height: 150px;
 }

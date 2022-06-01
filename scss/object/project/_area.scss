@@ -1,10 +1,40 @@
 @use "../../foundation/_mixin.scss";
 
 .p-area {
-    position: relative;
-    &__rotate {
-      position: absolute;
-      top: 140px;
-      left: 140px;
-    }
+   position: relative;
+   ul {
+      margin: 0;
+   }
+
+   &__main {
+      position   : absolute;
+      top        : 50%;
+      left       : 50%;
+      transform  : translate(-50%, -50%);
+      text-align : center;
+      line-height: 300px;
+   }
+
+   &__center {
+      // position: absolute;
+      // top: 50%;
+      // left: 50%;
+      // transform: translate(-50%, -50%);
+   }
+
+   &__rotate {
+      position   : absolute;
+      // top        : 140px;
+      // left       : 140px;
+      text-align : center;
+      line-height: 150px;
+   }
+
+   &__rotate--lv2 {
+      @extend .p-area__rotate;
+   }
+
+   &__rotate--lv3 {
+      @extend .p-area__rotate;
+   }
 }
