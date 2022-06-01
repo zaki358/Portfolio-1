@@ -2,4 +2,9 @@
 
 .p-area {
     position: relative;
+    &__rotate {
+      position: absolute;
+      top: 140px;
+      left: 140px;
+    }
 }

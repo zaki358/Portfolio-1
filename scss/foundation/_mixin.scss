@@ -7,23 +7,38 @@
     }
 }
 
+//font
 @mixin minchoRed {
     font-family: 'Shippori Mincho', serif;
     color: variables.$red;
 }
-
 @mixin minchoShuan {
     font-family: 'Shippori Mincho', serif;
     color: variables.$shuan;
 }
-
 @mixin minchoWhite {
     font-family: 'Shippori Mincho', serif;
     color: variables.$white;
 }
 
+//animation
+@mixin animation(
+  $name,
+  $duration: 1s,
+  $timing-function: ease,
+  $delay: 0s,
+  $iteration-count: 1,
+  $direction: normal,
+  $fill-mode: forwards
+) {
+  animation: {
+    name: $name;
+    duration: $duration;
+    timing-function: $timing-function;
+    delay: $delay;
+    iteration-count: $iteration-count;
+    direction: $direction;
+    fill-mode: $fill-mode;
+  }
+}
 
-//400;500;600;700
-//@include minchoRed;
-//@include minchoShuan;
-//@include minchoWhite;

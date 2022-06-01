@@ -1,0 +1,17 @@
+// window.addEventListener('resize',() => {
+//     let window_w = window.innerWidth;
+//     let window_h = window.innerHeight;
+//     let{a,b} = screenSize(window_w,window_h);
+
+//     circumference(b);
+// });
+
+
+
+
+
+
+    // let window_w = window.innerWidth;
+    // let window_h = window.innerHeight;
+
+    //let mainRaius = window_h * 0.7;
