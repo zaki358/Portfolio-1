@@ -2,9 +2,6 @@
 
 .p-area {
    position: relative;
-   ul {
-      margin: 0;
-   }
 
    &__main {
       position   : absolute;
@@ -12,29 +9,20 @@
       left       : 50%;
       transform  : translate(-50%, -50%);
       text-align : center;
-      line-height: 300px;
+      line-height: 28vh;
    }
 
-   &__center {
-      // position: absolute;
-      // top: 50%;
-      // left: 50%;
-      // transform: translate(-50%, -50%);
-   }
-
-   &__rotate {
+   &__front-menu--lv1 {
       position   : absolute;
-      // top        : 140px;
-      // left       : 140px;
       text-align : center;
-      line-height: 150px;
+      line-height: 14vh;
    }
 
-   &__rotate--lv2 {
-      @extend .p-area__rotate;
+   &__front-menu--lv2 {
+      @extend .p-area__front-menu--lv1;
    }
 
-   &__rotate--lv3 {
-      @extend .p-area__rotate;
+   &__front-menu--lv3 {
+      @extend .p-area__front-menu--lv1;
    }
 }

@@ -8,15 +8,15 @@
 }
 
 //font
-@mixin minchoRed {
+@mixin fontRed {
     font-family: 'Shippori Mincho', serif;
     color: variables.$red;
 }
-@mixin minchoShuan {
+@mixin mainFont {
     font-family: 'Shippori Mincho', serif;
-    color: variables.$shuan;
+    color: variables.$mainColor;
 }
-@mixin minchoWhite {
+@mixin fontWhite {
     font-family: 'Shippori Mincho', serif;
     color: variables.$white;
 }

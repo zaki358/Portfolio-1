@@ -1,0 +1,10 @@
+@use "../../foundation/_mixin.scss";
+@use "../../foundation/_variables.scss";
+
+.c-title {
+   &__menu--front {
+      @include mixin.mainFont;
+      font-size: 7.5vh;
+      font-weight: 700;
+   }
+}
