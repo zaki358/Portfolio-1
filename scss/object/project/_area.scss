@@ -25,4 +25,24 @@
    &__front-menu--lv3 {
       @extend .p-area__front-menu--lv1;
    }
+
+   &__scroll {
+      display: inline-block;
+      text-align: center;
+      width     : 70vh;
+      position  : absolute;
+      top       : 52vh;
+      left      : 240px;
+      //transform: rotate(90deg);
+      img {
+         height: 60px;
+         width: 14px;
+      }
+      span {
+         transform: rotate(90deg);
+         position: absolute;
+         left: -5px;
+         top: 13px;
+      }
+   }
 }

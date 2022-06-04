@@ -1,7 +1,12 @@
 @use "../../foundation/_mixin.scss";
 
-.c-font__footer {
-    @include mixin.fontRed;
-    font-size  : 1.6rem;
-    font-weight: 500;
+.c-font {
+   &__footer {
+      @include mixin.fontRed;
+      font-size  : 2rem;
+      font-weight: 500;
+   }
+   &__scroll {
+      @extend .c-font__footer;
+   }
 }

@@ -2,9 +2,15 @@
 @use "../../foundation/_variables.scss";
 
 .c-title {
+   &__main {
+      @include mixin.mainRed;
+      font-size: 18vh;
+      font-weight: 700;
+   }
+
    &__menu--front {
       @include mixin.mainFont;
       font-size: 7.5vh;
-      font-weight: 700;
+      font-weight: 600;
    }
 }
