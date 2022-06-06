@@ -163,6 +163,44 @@ body {
   font-weight: 600;
 }
 
+.c-img__scroll {
+  -webkit-animation-name: kf-scroll-anime;
+          animation-name: kf-scroll-anime;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes kf-scroll-anime {
+  0%, 50%, 100% {
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
+  }
+  30%, 70% {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes kf-scroll-anime {
+  0%, 50%, 100% {
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
+  }
+  30%, 70% {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
 .p-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -214,7 +252,7 @@ body {
   width: 70vh;
   position: absolute;
   top: 52vh;
-  left: 240px;
+  left: 34vh;
 }
 .p-area__scroll img {
   height: 60px;

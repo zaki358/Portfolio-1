@@ -141,22 +141,23 @@ body {
   height: 14vh;
 }
 
-.c-scroll {
-  font-family: "Shippori Mincho", 500;
-  color: #740A00;
-}
-
-.c-font__footer {
-  font-family: "Shippori Mincho", 500;
-  color: #740A00;
-  font-size: 1.6rem;
+.c-font__footer, .c-font__scroll {
+  font-family: "Shippori Mincho", serif;
+  color: #D20A13;
+  font-size: 2rem;
   font-weight: 500;
 }
-
+.c-title__main {
+  font-family: "Shippori Mincho", serif;
+  color: #FF3E2C;
+  font-size: 18vh;
+  font-weight: 700;
+}
 .c-title__menu--front {
-  font-family: "Shippori Mincho", 700;
+  font-family: "Shippori Mincho", serif;
   color: #740A00;
   font-size: 7.5vh;
+  font-weight: 600;
 }
 
 .p-wrapper {
@@ -169,6 +170,9 @@ body {
   flex-direction: row;
   justify-content: space-between;
 }
+.p-wrapper__foot {
+  width: 800px;
+}
 
 .p-area {
   position: relative;
@@ -179,10 +183,28 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  line-height: 300px;
+  line-height: 28vh;
 }
 .p-area__front-menu--lv1, .p-area__front-menu--lv3, .p-area__front-menu--lv2 {
   position: absolute;
   text-align: center;
   line-height: 14vh;
+}
+.p-area__scroll {
+  display: inline-block;
+  text-align: center;
+  width: 70vh;
+  position: absolute;
+  top: 52vh;
+  left: 34vh;
+}
+.p-area__scroll img {
+  height: 60px;
+  width: 14px;
+}
+.p-area__scroll span {
+  transform: rotate(90deg);
+  position: absolute;
+  left: -5px;
+  top: 13px;
 }

@@ -1,0 +1,24 @@
+@use "../../foundation/_mixin.scss";
+
+.c-img {
+   &__scroll {
+      @include mixin.animation(
+         $name: kf-scroll-anime,
+         $iteration-count: infinite,
+         $duration: 2s,
+         $timing-function: linear
+         );
+   }
+}
+
+@keyframes kf-scroll-anime {
+   0%,
+   50%,
+   100% {
+     transform: translateY(10%);
+   }
+   30%,
+   70% {
+     transform: none;
+   }
+}
