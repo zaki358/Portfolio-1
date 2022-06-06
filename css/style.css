@@ -164,43 +164,10 @@ body {
 }
 
 .c-img__scroll {
-  -webkit-animation-name: kf-scroll-anime;
-          animation-name: kf-scroll-anime;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  height: 60px;
+  width: 14px;
 }
 
-@-webkit-keyframes kf-scroll-anime {
-  0%, 50%, 100% {
-    -webkit-transform: translateY(10%);
-            transform: translateY(10%);
-  }
-  30%, 70% {
-    -webkit-transform: none;
-            transform: none;
-  }
-}
-
-@keyframes kf-scroll-anime {
-  0%, 50%, 100% {
-    -webkit-transform: translateY(10%);
-            transform: translateY(10%);
-  }
-  30%, 70% {
-    -webkit-transform: none;
-            transform: none;
-  }
-}
 .p-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -254,14 +221,48 @@ body {
   top: 52vh;
   left: 34vh;
 }
-.p-area__scroll img {
-  height: 60px;
-  width: 14px;
+.p-area__scroll--img {
+  -webkit-animation-name: kf-scroll-anime;
+          animation-name: kf-scroll-anime;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
-.p-area__scroll span {
+.p-area__scroll--font {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
   position: absolute;
   left: -5px;
   top: 13px;
+}
+
+@-webkit-keyframes kf-scroll-anime {
+  0%, 50%, 100% {
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
+  }
+  30%, 70% {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes kf-scroll-anime {
+  0%, 50%, 100% {
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
+  }
+  30%, 70% {
+    -webkit-transform: none;
+            transform: none;
+  }
 }
