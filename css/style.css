@@ -122,6 +122,16 @@ body {
 
 #l-header {
   height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .c-circle__main, .c-circle__menu {
@@ -144,12 +154,25 @@ body {
   height: 14vh;
 }
 
-.c-font__footer, .c-font__scroll {
+.c-font__header {
   font-family: "Shippori Mincho", serif;
   color: #D20A13;
   font-size: 2rem;
   font-weight: 500;
 }
+.c-font__scroll {
+  font-family: "Shippori Mincho", serif;
+  color: #D20A13;
+  font-size: 2.7vh;
+  font-weight: 500;
+}
+.c-font__footer {
+  font-family: "Shippori Mincho", serif;
+  color: #D20A13;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
 .c-title__main {
   font-family: "Shippori Mincho", serif;
   color: #FF3E2C;
@@ -164,8 +187,27 @@ body {
 }
 
 .c-img__scroll {
-  height: 60px;
+  height: 8vh;
   width: 14px;
+}
+
+.p-header__menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.p-header__list {
+  padding: 6px 10px;
+  margin: 4px 20px;
+}
+.p-header__list a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
 }
 
 .p-wrapper {
@@ -193,7 +235,7 @@ body {
           justify-content: space-between;
 }
 .p-wrapper__foot {
-  width: 800px;
+  width: 80vw;
 }
 
 .p-area {
