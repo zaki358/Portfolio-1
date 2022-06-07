@@ -122,6 +122,7 @@ body {
 
 #l-header {
   height: 70px;
+  margin-bottom: 6vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
