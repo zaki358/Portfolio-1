@@ -3,7 +3,7 @@
 .c-font {
    &__header {
       @include mixin.fontRed;
-      font-size  : 2rem;
+      font-size  : 2.4rem;
       font-weight: 500;
    }
    &__scroll {
@@ -13,7 +13,7 @@
    }
    &__footer {
       @include mixin.fontRed;
-      font-size  : 2rem;
+      font-size  : 2.4rem;
       font-weight: 500;
    }
 }
