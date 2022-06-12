@@ -12,5 +12,13 @@
       display        : flex;
       flex-direction : row;
       justify-content: space-between;
+   }
+   &__swiper {
+   .swiper {
+      width: 600px;
+      height: 300px;
+   }
   }
 }
+
+//swiper-slide-duplicate-activeクラスが付与されたら前面になる

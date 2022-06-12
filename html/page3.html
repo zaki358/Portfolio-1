@@ -1,15 +1,62 @@
-<!-- skill(スキル紹介) -->
+<!-- work(制作実績) -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Skill</title>
+   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
    <link rel="stylesheet" href="../css/style.css">
+
 </head>
+
 <body>
-   
+   <div id="l-container">
+      <header id="l-header">
+         <div class="p-header__img"> <img src="" class="p-header__logo c-logo--top" alt="ロゴ用画像"></div>
+         <div class="p-header__menu">
+            <ul>
+               <li class="p-header__list"><a class="c-font__header-menu" href="">About</a></li>
+               <li class="p-header__list"><a class="c-font__header-menu" href="">Work</a></li>
+               <li class="p-header__list"><a class="c-font__header-menu" href="">Skill</a></li>
+            </ul>
+         </div>
+      </header>
+
+      <div class="p-wrapper__swiper">
+         <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+               <!-- Slides -->
+               <div class="swiper-slide">
+                  <img src="..//images/image-1.jpg" alt="代用">
+               </div>
+               <div class="swiper-slide">
+                  <img src="..//images/image-2.jpg" alt="代用">
+               </div>
+               <div class="swiper-slide">
+                  <img src="..//images/image-3.jpg" alt="代用">
+               </div>
+               ...
+            </div>
+            <!-- If we need pagination -->
+            <!-- <div class="swiper-pagination"></div> -->
+
+            <!-- If we need navigation buttons -->
+            <!-- <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div> -->
+
+            <!-- If we need scrollbar -->
+            <!-- <div class="swiper-scrollbar"></div> -->
+         </div>
+      </div>
+   </div>
+
+   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+   <script src="../script/libs/slider.js"></script>
    <script src="../dist/bundle.js"></script>
 </body>
+
 </html>

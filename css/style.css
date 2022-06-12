@@ -199,6 +199,7 @@ body {
 }
 
 .p-header__menu ul {
+  margin-right: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -243,6 +244,10 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+.p-wrapper__swiper .swiper {
+  width: 600px;
+  height: 300px;
 }
 
 .p-area {
