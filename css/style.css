@@ -246,8 +246,12 @@ body {
           justify-content: space-between;
 }
 .p-wrapper__swiper .swiper {
-  width: 600px;
-  height: 300px;
+  width: 300px;
+  height: 600px;
+}
+.p-wrapper__swiper img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .p-area {

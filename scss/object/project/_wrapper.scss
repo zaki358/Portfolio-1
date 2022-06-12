@@ -15,8 +15,12 @@
    }
    &__swiper {
    .swiper {
-      width: 600px;
-      height: 300px;
+      width: 300px;
+      height: 600px;
+      //transform: skew(-20deg, -20deg) rotate(-45deg);
+   }
+   img {
+      object-fit: cover;
    }
   }
 }
