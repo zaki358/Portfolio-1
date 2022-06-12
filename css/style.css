@@ -155,11 +155,23 @@ body {
   height: 14vh;
 }
 
-.c-font__header {
+.c-font__header-menu {
   font-family: "Shippori Mincho", serif;
   color: #D20A13;
-  font-size: 2.4rem;
+  font-size: 1.8rem;
   font-weight: 500;
+}
+.c-font__main {
+  font-family: "Shippori Mincho", serif;
+  color: #FF3E2C;
+  font-size: 18vh;
+  font-weight: 700;
+}
+.c-font__main-menu--list {
+  font-family: "Shippori Mincho", serif;
+  color: #740A00;
+  font-size: 7.5vh;
+  font-weight: 600;
 }
 .c-font__scroll {
   font-family: "Shippori Mincho", serif;
@@ -167,10 +179,10 @@ body {
   font-size: 2.7vh;
   font-weight: 500;
 }
-.c-font__footer {
+.c-font__footer-menu {
   font-family: "Shippori Mincho", serif;
   color: #D20A13;
-  font-size: 2.4rem;
+  font-size: 1.8rem;
   font-weight: 500;
 }
 
@@ -179,12 +191,6 @@ body {
   color: #FF3E2C;
   font-size: 18vh;
   font-weight: 700;
-}
-.c-title__menu--front {
-  font-family: "Shippori Mincho", serif;
-  color: #740A00;
-  font-size: 7.5vh;
-  font-weight: 600;
 }
 
 .c-img__scroll {
@@ -223,7 +229,10 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-.p-wrapper__list {
+.p-wrapper__footer {
+  width: 50vh;
+}
+.p-wrapper__footer-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -234,9 +243,6 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-.p-wrapper__footer {
-  width: 80vw;
 }
 
 .p-area {

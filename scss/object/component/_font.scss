@@ -1,19 +1,29 @@
 @use "../../foundation/_mixin.scss";
 
 .c-font {
-   &__header {
+   &__header-menu {
       @include mixin.fontRed;
-      font-size  : 2.4rem;
+      font-size  : 1.8rem;
       font-weight: 500;
+   }
+   &__main {
+      @include mixin.mainRed;
+      font-size: 18vh;
+      font-weight: 700;
+   }
+   &__main-menu--list {
+      @include mixin.mainFont;
+      font-size: 7.5vh;
+      font-weight: 600;
    }
    &__scroll {
       @include mixin.fontRed;
       font-size  : 2.7vh;
       font-weight: 500;
    }
-   &__footer {
+   &__footer-menu {
       @include mixin.fontRed;
-      font-size  : 2.4rem;
+      font-size  : 1.8rem;
       font-weight: 500;
    }
 }
