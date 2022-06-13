@@ -197,6 +197,15 @@ body {
   height: 8vh;
   width: 14px;
 }
+.c-img__swiper {
+  margin: auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin: auto;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
 
 .p-header__menu ul {
   margin-right: 100px;
@@ -246,12 +255,21 @@ body {
           justify-content: space-between;
 }
 .p-wrapper__swiper .swiper {
-  width: 300px;
-  height: 600px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  width: 500px;
+  height: 500px;
 }
-.p-wrapper__swiper img {
-  -o-object-fit: cover;
-     object-fit: cover;
+.p-wrapper__swiper .swiper-wrapper {
+  width: 500px;
+  height: 500px;
+  border: 5px solid #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 0% 90% 0 90%;
+}
+.p-wrapper__swiper .swiper-slide div {
+  margin: auto;
 }
 
 .p-area {

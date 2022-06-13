@@ -11,14 +11,15 @@ class slider {
    _initSwiper() {
       return new Swiper(this.el, {
          // Optional parameters
-         effect: "flip",
+         spaceBetween: 30,
+         effect: "fade",
          grabCursor: true,
-         // direction: 'vertical',
          mousewheel: true,
          loop: true,
          centeredSlider: true,
          sliderPerView: 1,
          speed: 1000,
+         // direction: 'vertical',
          // autoplay: {
          //    delay: 4000,
          //    disableOnInteraction: false
