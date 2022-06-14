@@ -5,6 +5,46 @@
    flex-direction: column;
    align-items   : center;
 
+
+   &__swiper {
+      width          : 500px;
+	   height         : 500px;
+	   border         : 5px solid #000;
+      box-sizing     : border-box;
+      border-radius  : 0% 90% 0 90%;
+      margin         : auto;
+      display        : flex;
+      justify-content: center;
+      align-items    : center;
+      // transform: rotate(-45deg);
+      // border-top-style: none;
+      // border-right-style: none;
+   }
+   &__slide {
+      position: relative;
+      & > p {
+         position: absolute;
+         top: 400px;
+         left: 50%
+      }
+   }
+
+//swiperハンドリング
+   .swiper {
+      width : 300px;
+	   height: 300px;
+      &-wrapper {
+
+      }
+      &-slide {
+
+         &.swiper-slide-duplicate-active {
+
+      }
+   }
+}
+
+
    &__footer {
       width: 50vh;
    }
@@ -13,34 +53,4 @@
       flex-direction : row;
       justify-content: space-between;
    }
-   &__swiper {
-      & > .swiper {
-         //transform: rotate(-45deg) skew(10deg, 10deg);
-      }
-
-   .swiper {
-      transform: rotate(-45deg);
-      width: 500px;
-	   height: 500px;
-      &-wrapper {
-         
-         width: 500px;
-	      height: 500px;
-	      border: 5px solid #000;
-         // border-top-style: none;
-         // border-right-style: none;
-	      box-sizing: border-box;
-         border-radius: 0% 90% 0 90%;
-      }
-      &-slide {
-         div {
-            //transform: rotate(45deg);
-            margin: auto;
-         }
-
-      }
-   }
-  }
 }
-
-//swiper-slide-duplicate-activeクラスが付与されたら前面になる

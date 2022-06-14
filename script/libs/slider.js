@@ -24,36 +24,36 @@ class slider {
          //    delay: 4000,
          //    disableOnInteraction: false
          // },
-       
+
          // If we need pagination
          pagination: {
-           el: '.swiper-pagination',
+            el: '.swiper-pagination',
          },
-       
+
          // Navigation arrows
          navigation: {
-           nextEl: '.swiper-button-next',
-           prevEl: '.swiper-button-prev',
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
          },
-       
+
          // And if we need scrollbar
          scrollbar: {
-           el: '.swiper-scrollbar',
+            el: '.swiper-scrollbar',
          },
-       });
+      });
    }
-   
+
    //引数は空のオブジェクト
    start(options = {}) {
       options = Object.assign({
-          delay: 4000,
-          disableOnInteraction: false
+         delay: 4000,
+         disableOnInteraction: false
       }, options);
-      
+
       this.swiper.params.autoplay = options;
       this.swiper.autoplay.start();
-  }
-  stop() {
-   this.swiper.autoplay.stop();
+   }
+   stop() {
+      this.swiper.autoplay.stop();
 }
 }
