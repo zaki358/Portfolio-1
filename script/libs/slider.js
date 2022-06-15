@@ -16,10 +16,10 @@ class slider {
          grabCursor: true,
          mousewheel: true,
          loop: true,
-         centeredSlider: true,
+         //centeredSlider: true,
          sliderPerView: 1,
          speed: 1000,
-         // direction: 'vertical',
+         //direction: 'vertical',
          // autoplay: {
          //    delay: 4000,
          //    disableOnInteraction: false
