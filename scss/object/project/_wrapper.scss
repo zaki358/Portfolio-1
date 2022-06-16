@@ -8,24 +8,39 @@
 
 
    &__swiper {
-      width           : 500px;
-	   height          : 500px;
+      position        : relative;
+      width           : 600px;
+	   height          : 600px;
       background-color: val.$black;
 	   border          : 5px solid val.$gold;
       box-sizing      : border-box;
-      border-radius   : 0% 97% 0 93%;
+      border-radius   : 0% 88% 0 87%;
       margin          : auto;
       transform       : rotate(-45deg);
       // border-top-style: none;
       // border-right-style: none;
       .swiper {
+         width : 600px;
+         height: 600px;
+         transform: translate(-50%, -50%);
             transform: rotate(45deg);
          &-wrapper {
          }
          &-slide {
-            width : 500px;
-            height: 500px;
-            &.swiper-slide-duplicate-active {
+            width : 600px;
+            height: 600px;
+            img {
+            transform: scale(1.3);
+            transition: transform 1s;
+         }
+            //transition: transform 1s;
+            &-active {
+               img {
+                  transform: scale(1);
+               }
+            }
+            &-active:not {
+               opacity: 0;
             }
          }
       }
@@ -42,7 +57,7 @@
          width: 300px;
          background-color: val.$mainColor;
          position : absolute;
-         top      : 450px;
+         top      : 850px;
          left     : 50%;
          transform: translate(-50%, -50%);
          text-align:center
