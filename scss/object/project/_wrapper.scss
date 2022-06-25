@@ -17,30 +17,34 @@
       border-radius   : 0% 88% 0 87%;
       margin          : auto;
       transform       : rotate(-45deg);
-      // border-top-style: none;
-      // border-right-style: none;
+
+      //swiperハンドリング
       .swiper {
          width : 600px;
          height: 600px;
-         transform: translate(-50%, -50%);
-            transform: rotate(45deg);
+         transform: translate(-1%, -1%) rotate(45deg);
+
          &-wrapper {
          }
+
          &-slide {
             width : 600px;
             height: 600px;
             img {
-            transform: scale(1.3);
+            transform: scale(0.9);
             transition: transform 1s;
-         }
-            //transition: transform 1s;
+            }
+            p {
+               opacity: 0;
+            }
+            //前面にあるスライダー
             &-active {
                img {
                   transform: scale(1);
                }
-            }
-            &-active:not {
-               opacity: 0;
+               p {
+                  opacity: 1;
+               }
             }
          }
       }
@@ -54,13 +58,12 @@
       align-items    : center;
       position       : relative;
       & > p {
-         width: 300px;
-         background-color: val.$mainColor;
+         //width: 300px;
          position : absolute;
-         top      : 850px;
+         top      : 80px;
          left     : 50%;
          transform: translate(-50%, -50%);
-         text-align:center
+         
       }
    }
 

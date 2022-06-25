@@ -185,6 +185,13 @@ body {
   font-size: 1.8rem;
   font-weight: 500;
 }
+.c-font__swiper {
+  width: 300px;
+  font-family: "Shippori Mincho", serif;
+  color: #ffffff;
+  font-size: 1.8rem;
+  text-align: center;
+}
 
 .c-title__main {
   font-family: "Shippori Mincho", serif;
@@ -252,29 +259,30 @@ body {
 .p-wrapper__swiper .swiper {
   width: 600px;
   height: 600px;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -webkit-transform: translate(-1%, -1%) rotate(45deg);
+          transform: translate(-1%, -1%) rotate(45deg);
 }
 .p-wrapper__swiper .swiper-slide {
   width: 600px;
   height: 600px;
 }
 .p-wrapper__swiper .swiper-slide img {
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
   -webkit-transition: -webkit-transform 1s;
   transition: -webkit-transform 1s;
   transition: transform 1s;
   transition: transform 1s, -webkit-transform 1s;
 }
+.p-wrapper__swiper .swiper-slide p {
+  opacity: 0;
+}
 .p-wrapper__swiper .swiper-slide-active img {
   -webkit-transform: scale(1);
           transform: scale(1);
 }
-.p-wrapper__swiper .swiper-slide-active:not {
-  opacity: 0;
+.p-wrapper__swiper .swiper-slide-active p {
+  opacity: 1;
 }
 .p-wrapper__slide {
   width: 100%;
@@ -291,14 +299,11 @@ body {
   position: relative;
 }
 .p-wrapper__slide > p {
-  width: 300px;
-  background-color: #740A00;
   position: absolute;
-  top: 850px;
+  top: 80px;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  text-align: center;
 }
 .p-wrapper__footer {
   width: 50vh;

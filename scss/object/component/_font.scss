@@ -26,4 +26,10 @@
       font-size  : 1.8rem;
       font-weight: 500;
    }
+   &__swiper {
+      width: 300px;
+      @include mixin.fontWhite;
+      font-size: 1.8rem;
+      text-align: center;
+   }
 }
