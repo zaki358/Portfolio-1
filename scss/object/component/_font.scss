@@ -28,8 +28,9 @@
    }
    &__swiper {
       width: 300px;
-      @include mixin.fontWhite;
+      @include mixin.mainRed;
       font-size: 1.8rem;
       text-align: center;
+      letter-spacing: 4px;
    }
 }

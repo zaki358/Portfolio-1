@@ -9,33 +9,28 @@
 
    &__swiper {
       position        : relative;
-      width           : 600px;
+      width           : 1000px;
 	   height          : 600px;
-      background-color: val.$black;
-	   border          : 5px solid val.$gold;
-      box-sizing      : border-box;
-      border-radius   : 0% 88% 0 87%;
       margin          : auto;
-      transform       : rotate(-45deg);
+      background-image: url(../../../images/eye.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
 
       //swiperハンドリング
       .swiper {
-         width : 600px;
-         height: 600px;
-         transform: translate(-1%, -1%) rotate(45deg);
-
+         height: 100%;
          &-wrapper {
          }
-
          &-slide {
-            width : 600px;
-            height: 600px;
+            height: 100%;
             img {
-            transform: scale(0.9);
-            transition: transform 1s;
+            transform: scale(0.5);
+            transition: transform 2s;
             }
             p {
                opacity: 0;
+               transition: opacity 2s;
             }
             //前面にあるスライダー
             &-active {
@@ -60,7 +55,7 @@
       & > p {
          //width: 300px;
          position : absolute;
-         top      : 80px;
+         top      : 50px;
          left     : 50%;
          transform: translate(-50%, -50%);
          

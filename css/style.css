@@ -188,9 +188,10 @@ body {
 .c-font__swiper {
   width: 300px;
   font-family: "Shippori Mincho", serif;
-  color: #ffffff;
+  color: #FF3E2C;
   font-size: 1.8rem;
   text-align: center;
+  letter-spacing: 4px;
 }
 
 .c-title__main {
@@ -245,37 +246,32 @@ body {
 }
 .p-wrapper__swiper {
   position: relative;
-  width: 600px;
+  width: 1000px;
   height: 600px;
-  background-color: #000000;
-  border: 5px solid #e6b422;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-radius: 0% 88% 0 87%;
   margin: auto;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  background-image: url(../../../images/eye.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .p-wrapper__swiper .swiper {
-  width: 600px;
-  height: 600px;
-  -webkit-transform: translate(-1%, -1%) rotate(45deg);
-          transform: translate(-1%, -1%) rotate(45deg);
+  height: 100%;
 }
 .p-wrapper__swiper .swiper-slide {
-  width: 600px;
-  height: 600px;
+  height: 100%;
 }
 .p-wrapper__swiper .swiper-slide img {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
-  -webkit-transition: -webkit-transform 1s;
-  transition: -webkit-transform 1s;
-  transition: transform 1s;
-  transition: transform 1s, -webkit-transform 1s;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  -webkit-transition: -webkit-transform 2s;
+  transition: -webkit-transform 2s;
+  transition: transform 2s;
+  transition: transform 2s, -webkit-transform 2s;
 }
 .p-wrapper__swiper .swiper-slide p {
   opacity: 0;
+  -webkit-transition: opacity 2s;
+  transition: opacity 2s;
 }
 .p-wrapper__swiper .swiper-slide-active img {
   -webkit-transform: scale(1);
@@ -300,7 +296,7 @@ body {
 }
 .p-wrapper__slide > p {
   position: absolute;
-  top: 80px;
+  top: 50px;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
