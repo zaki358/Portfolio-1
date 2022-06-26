@@ -6,40 +6,34 @@
    flex-direction: column;
    align-items   : center;
 
-
    &__swiper {
-      position        : relative;
-      width           : 1000px;
-	   height          : 600px;
-      margin          : auto;
-      background-image: url(../../../images/eye.svg);
-      background-size: contain;
-      background-repeat: no-repeat;
+      position           : relative;
+      width              : 1000px;
+	   height             : 600px;
+      margin             : auto;
+      background-image   : url(../../../images/eye.svg);
+      background-size    : contain;
+      background-repeat  : no-repeat;
       background-position: center;
 
       //swiperハンドリング
       .swiper {
          height: 100%;
-         &-wrapper {
-         }
+         &-wrapper {}
          &-slide {
             height: 100%;
             img {
-            transform: scale(0.5);
+            transform : scale(0.5);
             transition: transform 2s;
             }
             p {
-               opacity: 0;
+               opacity   : 0;
                transition: opacity 2s;
             }
             //前面にあるスライダー
             &-active {
-               img {
-                  transform: scale(1);
-               }
-               p {
-                  opacity: 1;
-               }
+               img {transform: scale(1);}
+               p {opacity: 1;}
             }
          }
       }
@@ -52,19 +46,17 @@
       justify-content: center;
       align-items    : center;
       position       : relative;
-      & > p {
-         //width: 300px;
+      &--img {margin: auto;}
+      &--title {
+         width    : 300px;
          position : absolute;
          top      : 50px;
          left     : 50%;
          transform: translate(-50%, -50%);
-         
       }
    }
 
-   &__footer {
-      width: 50vh;
-   }
+   &__footer {width: 50vh;}
    &__footer-list {
       display        : flex;
       flex-direction : row;

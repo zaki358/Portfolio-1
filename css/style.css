@@ -186,7 +186,6 @@ body {
   font-weight: 500;
 }
 .c-font__swiper {
-  width: 300px;
   font-family: "Shippori Mincho", serif;
   color: #FF3E2C;
   font-size: 1.8rem;
@@ -206,12 +205,16 @@ body {
   width: 14px;
 }
 .c-img__swiper {
-  margin: auto;
   width: 400px;
   height: 400px;
   border-radius: 50%;
 }
 
+.p-header__link--front {
+  display: inline-block;
+  width: 300px;
+  height: 100%;
+}
 .p-header__menu ul {
   margin-right: 100px;
   display: -webkit-box;
@@ -294,7 +297,11 @@ body {
           align-items: center;
   position: relative;
 }
-.p-wrapper__slide > p {
+.p-wrapper__slide--img {
+  margin: auto;
+}
+.p-wrapper__slide--title {
+  width: 300px;
   position: absolute;
   top: 50px;
   left: 50%;
