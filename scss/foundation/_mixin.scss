@@ -28,6 +28,7 @@
 
 //animation
 @mixin animation(
+   //初期値
   $name,
   $duration: 1s,
   $timing-function: ease,
@@ -36,6 +37,7 @@
   $direction: normal,
   $fill-mode: forwards
 ) {
+   //プロパティのネスト記法
   animation: {
     name: $name;
     duration: $duration;
