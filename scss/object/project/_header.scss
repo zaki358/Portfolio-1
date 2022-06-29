@@ -9,39 +9,41 @@
    &__logo {}
    &__menu {
       ul {
-      margin-right  : 100px;
+      //margin-right  : 100px;
       display       : flex;
       flex-direction: row;
       }
    }
    &__list {
-      padding: 6px 10px;
-      margin : 4px 20px;
+      width     : 100px;
+      padding   : 6px 8px;
+      margin    : 4px 8px;
+      text-align: center;
       position: relative;
-      //transition: all 20s;
-      // &::before {
-      //    content: "";
-      //    opacity: 0;
-      //    transition: all 2s;
-      // }
       a:first-of-type{}
       a:nth-of-type(2) {
-         position: absolute;
-         left: 0;
-         top: calc(50% - 1rem);
-         opacity: 0;
-         transition-property: opacity;
-	      transition-delay: 0.8s;
+         width    : 84px;
+         position : absolute;
+         left     : 50%;
+         top      : calc(50% - 1.3rem);
+         transform: translate(-50%,0%);
+         opacity  : 0;
+         // transition-property : opacity;
+	      // transition-delay    : 0.8 s;
       }
       &:hover {
          a:first-of-type{
+            
             @include mixin.animation(
-            $name: kf-3d-rotate-anime,
-            $duration: 1s
+               $name    : kf-3d-rotate-anime,
+               $duration: 1s
             );
          }
          a:nth-of-type(2) {
-            opacity: 1;
+            @include mixin.animation(
+               $name    : kf-opacity-anime,
+               $duration: 1s
+            );
          }
          }
    }
@@ -68,4 +70,10 @@
       transform: rotate3d(0, -1, 0, 360deg);
       opacity: 0;
    }
+}
+
+@keyframes kf-opacity-anime {
+   0% {opacity: 0;}
+   75% {opacity: 0;}
+   100% {opacity: 1;}
 }

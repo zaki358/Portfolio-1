@@ -2,7 +2,6 @@
 
 .c-font {
    &__header-menu {
-      display    : inline-block;
       @include mixin.fontRed;
       font-size  : 1.8rem;
       font-weight: 500;

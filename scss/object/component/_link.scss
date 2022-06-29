@@ -1,0 +1,12 @@
+@use "../../foundation/_mixin.scss";
+
+.c-link {
+   &__header-menu--en {
+      display: inline-block;
+      width: 84px
+   }
+   &__header-menu--ja {
+      display: inline-block;
+      width: 84px
+   }
+}

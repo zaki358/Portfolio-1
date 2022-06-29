@@ -156,7 +156,6 @@ body {
 }
 
 .c-font__header-menu {
-  display: inline-block;
   font-family: "Shippori Mincho", serif;
   color: #D20A13;
   font-size: 1.8rem;
@@ -194,6 +193,15 @@ body {
   letter-spacing: 4px;
 }
 
+.c-link__header-menu--en {
+  display: inline-block;
+  width: 84px;
+}
+.c-link__header-menu--ja {
+  display: inline-block;
+  width: 84px;
+}
+
 .c-title__main {
   font-family: "Shippori Mincho", serif;
   color: #FF3E2C;
@@ -217,7 +225,6 @@ body {
   height: 100%;
 }
 .p-header__menu ul {
-  margin-right: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -227,19 +234,20 @@ body {
           flex-direction: row;
 }
 .p-header__list {
-  padding: 6px 10px;
-  margin: 4px 20px;
+  width: 100px;
+  padding: 6px 8px;
+  margin: 4px 8px;
+  text-align: center;
   position: relative;
 }
 .p-header__list a:nth-of-type(2) {
+  width: 84px;
   position: absolute;
-  left: 0;
-  top: calc(50% - 1rem);
+  left: 50%;
+  top: calc(50% - 1.3rem);
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
   opacity: 0;
-  -webkit-transition-property: opacity;
-  transition-property: opacity;
-  -webkit-transition-delay: 0.8s;
-          transition-delay: 0.8s;
 }
 .p-header__list:hover a:first-of-type {
   -webkit-animation-name: kf-3d-rotate-anime;
@@ -258,7 +266,20 @@ body {
           animation-fill-mode: forwards;
 }
 .p-header__list:hover a:nth-of-type(2) {
-  opacity: 1;
+  -webkit-animation-name: kf-opacity-anime;
+          animation-name: kf-opacity-anime;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes kf-3d-rotate-anime {
@@ -314,6 +335,28 @@ body {
     -webkit-transform: rotate3d(0, -1, 0, 360deg);
             transform: rotate3d(0, -1, 0, 360deg);
     opacity: 0;
+  }
+}
+@-webkit-keyframes kf-opacity-anime {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes kf-opacity-anime {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 .p-wrapper {
