@@ -36,13 +36,13 @@
             
             @include mixin.animation(
                $name    : kf-3d-rotate-anime,
-               $duration: 1s
+               $duration: 0.5s
             );
          }
          a:nth-of-type(2) {
             @include mixin.animation(
                $name    : kf-opacity-anime,
-               $duration: 1s
+               $duration: 0.5s
             );
          }
          }
@@ -55,19 +55,19 @@
       opacity: 1;
    }
    25% {
-      transform: rotate3d(0, -1, 0, 90deg);
+      transform: rotate3d(0, -1, 0, 45deg);
       opacity: 1;
    }
    50% {
-      transform: rotate3d(0, -1, 0, 180deg);
+      transform: rotate3d(0, -1, 0, 90deg);
       opacity: 1;
    }
    75% {
-      transform: rotate3d(0, -1, 0, 270deg);
+      transform: rotate3d(0, -1, 0, 135deg);
       opacity: 0;
    }
    100% {
-      transform: rotate3d(0, -1, 0, 360deg);
+      transform: rotate3d(0, -1, 0, 180deg);
       opacity: 0;
    }
 }

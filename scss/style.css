@@ -137,7 +137,7 @@ body {
   width: 70vh;
   height: 70vh;
   box-sizing: border-box;
-  border: #000000 2px solid;
+  border: #000000 3px solid;
   border-radius: 35vh;
 }
 .c-circle__menu {
@@ -145,15 +145,11 @@ body {
   height: 14vh;
 }
 
-.c-font__header-menu, .c-font__header-menu__japan {
-  display: inline-block;
+.c-font__header-menu {
   font-family: "Shippori Mincho", serif;
   color: #D20A13;
   font-size: 1.8rem;
   font-weight: 500;
-}
-.c-font__header-menu__japan {
-  width: 84px;
 }
 .c-font__main {
   font-family: "Shippori Mincho", serif;
@@ -185,6 +181,15 @@ body {
   font-size: 1.8rem;
   text-align: center;
   letter-spacing: 4px;
+}
+
+.c-link__header-menu--en {
+  display: inline-block;
+  width: 84px;
+}
+.c-link__header-menu--ja {
+  display: inline-block;
+  width: 84px;
 }
 
 .c-title__main {
@@ -231,8 +236,8 @@ body {
 .p-header__list:hover a:first-of-type {
   -webkit-animation-name: kf-3d-rotate-anime;
           animation-name: kf-3d-rotate-anime;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
   -webkit-animation-timing-function: ease;
           animation-timing-function: ease;
   -webkit-animation-delay: 0s;
@@ -247,8 +252,8 @@ body {
 .p-header__list:hover a:nth-of-type(2) {
   -webkit-animation-name: kf-opacity-anime;
           animation-name: kf-opacity-anime;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
   -webkit-animation-timing-function: ease;
           animation-timing-function: ease;
   -webkit-animation-delay: 0s;
@@ -267,19 +272,19 @@ body {
     opacity: 1;
   }
   25% {
-    transform: rotate3d(0, -1, 0, 90deg);
+    transform: rotate3d(0, -1, 0, 45deg);
     opacity: 1;
   }
   50% {
-    transform: rotate3d(0, -1, 0, 180deg);
+    transform: rotate3d(0, -1, 0, 90deg);
     opacity: 1;
   }
   75% {
-    transform: rotate3d(0, -1, 0, 270deg);
+    transform: rotate3d(0, -1, 0, 135deg);
     opacity: 0;
   }
   100% {
-    transform: rotate3d(0, -1, 0, 360deg);
+    transform: rotate3d(0, -1, 0, 180deg);
     opacity: 0;
   }
 }
@@ -290,19 +295,19 @@ body {
     opacity: 1;
   }
   25% {
-    transform: rotate3d(0, -1, 0, 90deg);
+    transform: rotate3d(0, -1, 0, 45deg);
     opacity: 1;
   }
   50% {
-    transform: rotate3d(0, -1, 0, 180deg);
+    transform: rotate3d(0, -1, 0, 90deg);
     opacity: 1;
   }
   75% {
-    transform: rotate3d(0, -1, 0, 270deg);
+    transform: rotate3d(0, -1, 0, 135deg);
     opacity: 0;
   }
   100% {
-    transform: rotate3d(0, -1, 0, 360deg);
+    transform: rotate3d(0, -1, 0, 180deg);
     opacity: 0;
   }
 }
@@ -453,4 +458,12 @@ body {
   30%, 70% {
     transform: none;
   }
+}
+.p-skill-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.p-skill-area__main {
+  transform: translate(50%, 50%);
 }
