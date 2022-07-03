@@ -33,7 +33,6 @@
       }
       &:hover {
          a:first-of-type{
-            
             @include mixin.animation(
                $name    : kf-3d-rotate-anime,
                $duration: 0.5s
@@ -45,7 +44,7 @@
                $duration: 0.5s
             );
          }
-         }
+      }
    }
 }
 

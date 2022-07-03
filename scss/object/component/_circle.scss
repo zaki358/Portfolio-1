@@ -18,6 +18,10 @@
       border       : #000000 3px solid;
       border-radius: 35vh;
    }
+   &__principal--skill {
+      @extend .c-circle__principal;
+      background-color: rgba($color: #740A00, $alpha: 0.5);
+   }
 
    &__menu {
       @extend .c-circle__main;

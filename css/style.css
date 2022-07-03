@@ -142,13 +142,16 @@ body {
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.9);
 }
-.c-circle__principal {
+.c-circle__principal, .c-circle__principal--skill {
   width: 70vh;
   height: 70vh;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: #000000 3px solid;
   border-radius: 35vh;
+}
+.c-circle__principal--skill {
+  background-color: rgba(116, 10, 0, 0.5);
 }
 .c-circle__menu {
   width: 14vh;
@@ -192,6 +195,16 @@ body {
   text-align: center;
   letter-spacing: 4px;
 }
+.c-font__about {
+  font-family: "Shippori Mincho", serif;
+  color: #FF3E2C;
+  font-size: 3.2rem;
+}
+.c-font__skill-detail {
+  font-family: "Shippori Mincho", serif;
+  color: #ffffff;
+  font-size: 2.4rem;
+}
 
 .c-link__header-menu--en {
   display: inline-block;
@@ -207,6 +220,13 @@ body {
   color: #FF3E2C;
   font-size: 18vh;
   font-weight: 700;
+}
+.c-title__skill-font {
+  font-family: "Shippori Mincho", serif;
+  color: #ffffff;
+  font-size: 4.8rem;
+  font-weight: bold;
+  text-align: center;
 }
 
 .c-img__scroll {
@@ -518,7 +538,8 @@ body {
             transform: none;
   }
 }
-.p-skill-area {
+.p-about {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -530,7 +551,16 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.p-skill-area__main {
-  -webkit-transform: translate(50%, 50%);
-          transform: translate(50%, 50%);
+.p-about__left {
+  width: 250px;
+}
+.p-about__detail--left {
+  position: absolute;
+  top: 0;
+  left: 250px;
+  width: 70vh;
+  height: 70vh;
+}
+.p-about__right {
+  width: 250px;
 }

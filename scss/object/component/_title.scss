@@ -7,4 +7,10 @@
       font-size: 18vh;
       font-weight: 700;
    }
+   &__skill-font {
+      @include mixin.fontWhite;
+      font-size: 4.8rem;
+      font-weight: bold;
+      text-align: center;
+   }
 }
