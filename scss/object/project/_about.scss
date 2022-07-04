@@ -15,35 +15,30 @@
       left    : 250px;
       width   : 70vh;
       height  : 70vh;
-      @include mixin.skill-term-off;
    }
    &__item {
       &--html {
+         @include mixin.skill-term-off;
          &:hover {
-            .p-about__term--left {
-               @include mixin.skill-term-on;
-            }
+            @include mixin.skill-term-on;
          }
       }
       &--css {
+         @include mixin.skill-term-off;
          &:hover {
-            .p-about__term--left {
-               @include mixin.skill-term-on;
-            }
+            @include mixin.skill-term-on;
          }
       }
       &--js {
+         @include mixin.skill-term-off;
          &:hover {
-            .p-about__term--left {
-               @include mixin.skill-term-on;
-            }
+            @include mixin.skill-term-on;
          }
       }
       &--wp {
+         @include mixin.skill-term-off;
          &:hover {
-            .p-about__term--left {
-               @include mixin.skill-term-on;
-            }
+            @include mixin.skill-term-on;
          }
       }
    }
@@ -56,36 +51,44 @@
    }
    &__item {
       &--ai {
+         @include mixin.skill-term-off;
          &:hover {
-            .p-about__term--right {
-               @include mixin.skill-term-on;
-            }
+            @include mixin.skill-term-on;
          }
       }
       &--ps {
+         @include mixin.skill-term-off;
          &:hover {
-            .p-about__term--right {
-               @include mixin.skill-term-on;
-            }
+            @include mixin.skill-term-on;
          }
       }
       &--xd {
+         @include mixin.skill-term-off;
          &:hover {
-            .p-about__term--right {
-               @include mixin.skill-term-on;
-            }
+            @include mixin.skill-term-on;
          }
       }
       &--figma {
+         @include mixin.skill-term-off;
          &:hover {
-            .p-about__term--right {
-               @include mixin.skill-term-on;
-            }
+            @include mixin.skill-term-on;
          }
       }
    }
 
    &__center {
-
+      position: relative;
+      ul {
+         display: none;
+      }
    }
+   &__icon--html {}
+   &__icon--css {}
+   &__icon--js {}
+   &__icon--ws {}
+   &__icon--ai {}
+   &__icon--ps {}
+   &__icon--xd {}
+   &__icon--figma {}
+
 }

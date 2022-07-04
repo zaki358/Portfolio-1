@@ -50,6 +50,9 @@
 }
 
 @mixin skill-term-off {
+   dl {
+      z-index: -1;
+   }
    dt {
       opacity: 0;
       transform: translateY(100px);
@@ -63,6 +66,10 @@
 }
 
 @mixin skill-term-on {
+   dl {
+      transition: all;
+      z-index: 100;
+   }
    dt {
       transition: all 1s;
       transform: translateY(0);
