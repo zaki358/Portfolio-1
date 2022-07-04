@@ -49,3 +49,30 @@
   }
 }
 
+@mixin skill-term-off {
+   dt {
+      opacity: 0;
+      transform: translateY(100px);
+   }
+   dd {
+      
+      opacity: 0;
+      transform: translateY(100px);
+   }
+   
+}
+
+@mixin skill-term-on {
+   dt {
+      transition: all 1s;
+      transform: translateY(0);
+      opacity: 1;
+   }
+   dd {
+      transition: all 1s;
+      transition-delay: 0.5s;
+      transform: translateY(0);
+      opacity: 1;
+   }
+}
+

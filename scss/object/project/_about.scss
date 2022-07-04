@@ -1,25 +1,90 @@
-
+@use "../../foundation/_mixin.scss";
 
 .p-about {
-   position: relative;
-   display: flex;
-   flex-direction: row;
+   position       : relative;
+   display        : flex;
+   flex-direction : row;
    justify-content: center;
    &__left {
-      width: 250px;
+      width     : 250px;
+      text-align: center;
    }
-   &__detail--left {
+   &__term--left {
       position: absolute;
-      top: 0;
-      left: 250px;
-      //background-color: aqua;
-      //display: none;
-      width: 70vh;
-      height: 70vh;
+      top     : 0;
+      left    : 250px;
+      width   : 70vh;
+      height  : 70vh;
+      @include mixin.skill-term-off;
    }
+   &__item {
+      &--html {
+         &:hover {
+            .p-about__term--left {
+               @include mixin.skill-term-on;
+            }
+         }
+      }
+      &--css {
+         &:hover {
+            .p-about__term--left {
+               @include mixin.skill-term-on;
+            }
+         }
+      }
+      &--js {
+         &:hover {
+            .p-about__term--left {
+               @include mixin.skill-term-on;
+            }
+         }
+      }
+      &--wp {
+         &:hover {
+            .p-about__term--left {
+               @include mixin.skill-term-on;
+            }
+         }
+      }
+   }
+
    &__right {
-      width: 250px;
+      @extend .p-about__left;
    }
+   &__term--right {
+      @extend .p-about__term--left;
+   }
+   &__item {
+      &--ai {
+         &:hover {
+            .p-about__term--right {
+               @include mixin.skill-term-on;
+            }
+         }
+      }
+      &--ps {
+         &:hover {
+            .p-about__term--right {
+               @include mixin.skill-term-on;
+            }
+         }
+      }
+      &--xd {
+         &:hover {
+            .p-about__term--right {
+               @include mixin.skill-term-on;
+            }
+         }
+      }
+      &--figma {
+         &:hover {
+            .p-about__term--right {
+               @include mixin.skill-term-on;
+            }
+         }
+      }
+   }
+
    &__center {
 
    }

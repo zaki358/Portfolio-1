@@ -196,6 +196,7 @@ body {
   letter-spacing: 4px;
 }
 .c-font__about {
+  cursor: pointer;
   font-family: "Shippori Mincho", serif;
   color: #FF3E2C;
   font-size: 3.2rem;
@@ -203,7 +204,9 @@ body {
 .c-font__skill-detail {
   font-family: "Shippori Mincho", serif;
   color: #ffffff;
-  font-size: 2.4rem;
+  font-size: 2vh;
+  text-align: start;
+  width: 50vh;
 }
 
 .c-link__header-menu--en {
@@ -224,7 +227,7 @@ body {
 .c-title__skill-font {
   font-family: "Shippori Mincho", serif;
   color: #ffffff;
-  font-size: 4.8rem;
+  font-size: 5vh;
   font-weight: bold;
   text-align: center;
 }
@@ -551,16 +554,159 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.p-about__left {
+.p-about__left, .p-about__right {
   width: 250px;
+  text-align: center;
 }
-.p-about__detail--left {
+.p-about__term--left, .p-about__term--right {
   position: absolute;
   top: 0;
   left: 250px;
   width: 70vh;
   height: 70vh;
 }
-.p-about__right {
-  width: 250px;
+.p-about__term--left dt, .p-about__term--right dt {
+  opacity: 0;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+}
+.p-about__term--left dd, .p-about__term--right dd {
+  opacity: 0;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+}
+.p-about__item--html:hover .p-about__term--left dt, .p-about__item--html:hover .p-about__term--right dt {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+.p-about__item--html:hover .p-about__term--left dd, .p-about__item--html:hover .p-about__term--right dd {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+.p-about__item--css:hover .p-about__term--left dt, .p-about__item--css:hover .p-about__term--right dt {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+.p-about__item--css:hover .p-about__term--left dd, .p-about__item--css:hover .p-about__term--right dd {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+.p-about__item--js:hover .p-about__term--left dt, .p-about__item--js:hover .p-about__term--right dt {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+.p-about__item--js:hover .p-about__term--left dd, .p-about__item--js:hover .p-about__term--right dd {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+.p-about__item--wp:hover .p-about__term--left dt, .p-about__item--wp:hover .p-about__term--right dt {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+.p-about__item--wp:hover .p-about__term--left dd, .p-about__item--wp:hover .p-about__term--right dd {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+.p-about__item--ai:hover .p-about__term--right dt {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+.p-about__item--ai:hover .p-about__term--right dd {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+.p-about__item--ps:hover .p-about__term--right dt {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+.p-about__item--ps:hover .p-about__term--right dd {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+.p-about__item--xd:hover .p-about__term--right dt {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+.p-about__item--xd:hover .p-about__term--right dd {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+.p-about__item--figma:hover .p-about__term--right dt {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+.p-about__item--figma:hover .p-about__term--right dd {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+.u-margin__term {
+  margin-top: 4vh;
+}
+.u-margin__detail {
+  margin: auto;
+  margin-top: 8vh;
 }

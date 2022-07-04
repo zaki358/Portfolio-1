@@ -33,11 +33,14 @@
       letter-spacing: 4px;
    }
    &__about {
+      cursor: pointer;
       @include mixin.mainRed;
       font-size: 3.2rem;
    }
    &__skill-detail {
       @include mixin.fontWhite;
-      font-size: 2.4rem;
+      font-size : 2.0vh;
+      text-align: start;
+      width     : 50vh;
    }
 }
