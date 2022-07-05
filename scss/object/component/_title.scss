@@ -4,13 +4,20 @@
 .c-title {
    &__main {
       @include mixin.mainRed;
-      font-size: 18vh;
+      font-size  : 18vh;
       font-weight: 700;
+   }
+   &__feature--title {
+      @include mixin.fontWhite;
+      font-size  : 5vh;
+      font-weight: bold;
+      text-align : center;
+      opacity: 0.5;
    }
    &__skill-font {
       @include mixin.fontWhite;
-      font-size: 5vh;
+      font-size  : 5vh;
       font-weight: bold;
-      text-align: center;
+      text-align : center;
    }
 }

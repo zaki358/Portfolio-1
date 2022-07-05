@@ -1,4 +1,11 @@
 .u-margin {
+   &__feature--title {
+      margin-top: 4vh;
+   }
+   &__feature--text {
+      margin    : auto;
+      margin-top: 8vh;
+   }
    &__term {
       margin-top: 4vh;
    }

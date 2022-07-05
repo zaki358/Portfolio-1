@@ -191,6 +191,12 @@ body {
   font-size: 1.8rem;
   font-weight: 500;
 }
+.c-font__feature--text {
+  font-family: "Shippori Mincho", serif;
+  color: #ffffff;
+  font-size: 2vh;
+  text-align: start;
+}
 .c-font__swiper {
   font-family: "Shippori Mincho", serif;
   color: #FF3E2C;
@@ -226,6 +232,14 @@ body {
   color: #FF3E2C;
   font-size: 18vh;
   font-weight: 700;
+}
+.c-title__feature--title {
+  font-family: "Shippori Mincho", serif;
+  color: #ffffff;
+  font-size: 5vh;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0.5;
 }
 .c-title__skill-font {
   font-family: "Shippori Mincho", serif;
@@ -905,6 +919,7 @@ body {
   display: none;
 }
 .p-feature__text {
+  width: 50vh;
   height: 38vh;
   overflow: hidden;
 }
@@ -930,6 +945,13 @@ body {
   height: 100%;
 }
 
+.u-margin__feature--title {
+  margin-top: 4vh;
+}
+.u-margin__feature--text {
+  margin: auto;
+  margin-top: 8vh;
+}
 .u-margin__term {
   margin-top: 4vh;
 }
