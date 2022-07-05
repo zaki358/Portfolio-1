@@ -142,13 +142,16 @@ body {
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.9);
 }
-.c-circle__principal, .c-circle__principal--skill {
+.c-circle__principal, .c-circle__principal--skill, .c-circle__principal--about {
   width: 70vh;
   height: 70vh;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: #000000 3px solid;
   border-radius: 35vh;
+}
+.c-circle__principal--about {
+  background-color: rgba(116, 10, 0, 0.5);
 }
 .c-circle__principal--skill {
   background-color: rgba(116, 10, 0, 0.5);
@@ -242,6 +245,21 @@ body {
   border-radius: 50%;
 }
 
+.c-icon__feature--twitter, .c-icon__feature--github {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: #000000 0.5px solid;
+  border-radius: 35vh;
+  background-image: url(../../../images/skill-icon/twitter.svg);
+  background-color: black;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+}
+.c-icon__feature--github {
+  background-image: url(../../../images/skill-icon/github.svg);
+  background-color: white;
+}
 .c-icon__circle--html, .c-icon__circle--figma, .c-icon__circle--xd, .c-icon__circle--ps, .c-icon__circle--ai, .c-icon__circle--wp, .c-icon__circle--js, .c-icon__circle--css {
   width: 14vh;
   height: 14vh;
@@ -886,6 +904,32 @@ body {
 .p-about__center ul {
   display: none;
 }
+.p-feature__text {
+  height: 38vh;
+  overflow: hidden;
+}
+.p-feature__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.p-feature__icon {
+  width: 10vh;
+  height: 10vh;
+}
+.p-feature__icon a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
 .u-margin__term {
   margin-top: 4vh;
 }
