@@ -8,11 +8,13 @@
       font-weight: 700;
    }
    &__feature--title {
-      @include mixin.fontWhite;
-      font-size  : 5vh;
-      font-weight: bold;
-      text-align : center;
-      opacity: 0.5;
+      //@include mixin.fontWhite;
+      //font-size  : 5vh;
+      //font-weight: bold;
+      //text-align : center;
+      opacity: 0.8;
+      width: 35vh;
+      margin: auto;
    }
    &__skill-font {
       @include mixin.fontWhite;

@@ -142,7 +142,7 @@ body {
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.9);
 }
-.c-circle__principal, .c-circle__principal--skill, .c-circle__principal--about {
+.c-circle__principal, .c-circle__principal--skill {
   width: 70vh;
   height: 70vh;
   -webkit-box-sizing: border-box;
@@ -151,7 +151,13 @@ body {
   border-radius: 35vh;
 }
 .c-circle__principal--about {
-  background-color: rgba(116, 10, 0, 0.5);
+  width: 70vh;
+  height: 70vh;
+  background-image: url(../../../images/circle.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 35vh;
 }
 .c-circle__principal--skill {
   background-color: rgba(116, 10, 0, 0.5);
@@ -234,12 +240,9 @@ body {
   font-weight: 700;
 }
 .c-title__feature--title {
-  font-family: "Shippori Mincho", serif;
-  color: #ffffff;
-  font-size: 5vh;
-  font-weight: bold;
-  text-align: center;
-  opacity: 0.5;
+  opacity: 0.8;
+  width: 35vh;
+  margin: auto;
 }
 .c-title__skill-font {
   font-family: "Shippori Mincho", serif;
@@ -262,13 +265,12 @@ body {
 .c-icon__feature--twitter, .c-icon__feature--github {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: #000000 0.5px solid;
   border-radius: 35vh;
   background-image: url(../../../images/skill-icon/twitter.svg);
-  background-color: black;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.5;
+  background-size: 110%;
+  opacity: 0.8;
 }
 .c-icon__feature--github {
   background-image: url(../../../images/skill-icon/github.svg);
@@ -918,9 +920,25 @@ body {
 .p-about__center ul {
   display: none;
 }
+.p-feature__title {
+  -webkit-animation-name: title-glitch;
+          animation-name: title-glitch;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
 .p-feature__text {
   width: 50vh;
-  height: 38vh;
+  height: 36vh;
   overflow: hidden;
 }
 .p-feature__link {
@@ -936,8 +954,8 @@ body {
           justify-content: center;
 }
 .p-feature__icon {
-  width: 10vh;
-  height: 10vh;
+  width: 8vh;
+  height: 8vh;
 }
 .p-feature__icon a {
   display: inline-block;
@@ -945,12 +963,121 @@ body {
   height: 100%;
 }
 
+@-webkit-keyframes title-glitch {
+  0% {
+    -webkit-transform: none;
+            transform: none;
+  }
+  33% {
+    -webkit-transform: none;
+            transform: none;
+  }
+  33.3% {
+    -webkit-transform: skewX(30deg);
+            transform: skewX(30deg);
+  }
+  33.6% {
+    -webkit-transform: skewX(-30deg);
+            transform: skewX(-30deg);
+  }
+  33.9% {
+    -webkit-transform: none;
+            transform: none;
+  }
+  66% {
+    -webkit-transform: none;
+            transform: none;
+  }
+  66.3% {
+    -webkit-transform: skewX(5deg);
+            transform: skewX(5deg);
+  }
+  66.6% {
+    -webkit-transform: skewX(-5deg);
+            transform: skewX(-5deg);
+  }
+  66.9% {
+    -webkit-transform: none;
+            transform: none;
+  }
+  77% {
+    -webkit-transform: none;
+            transform: none;
+  }
+  77.3% {
+    -webkit-transform: skewX(15deg);
+            transform: skewX(15deg);
+  }
+  77.6% {
+    -webkit-transform: skewX(-15deg);
+            transform: skewX(-15deg);
+  }
+  77.9% {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes title-glitch {
+  0% {
+    -webkit-transform: none;
+            transform: none;
+  }
+  33% {
+    -webkit-transform: none;
+            transform: none;
+  }
+  33.3% {
+    -webkit-transform: skewX(30deg);
+            transform: skewX(30deg);
+  }
+  33.6% {
+    -webkit-transform: skewX(-30deg);
+            transform: skewX(-30deg);
+  }
+  33.9% {
+    -webkit-transform: none;
+            transform: none;
+  }
+  66% {
+    -webkit-transform: none;
+            transform: none;
+  }
+  66.3% {
+    -webkit-transform: skewX(5deg);
+            transform: skewX(5deg);
+  }
+  66.6% {
+    -webkit-transform: skewX(-5deg);
+            transform: skewX(-5deg);
+  }
+  66.9% {
+    -webkit-transform: none;
+            transform: none;
+  }
+  77% {
+    -webkit-transform: none;
+            transform: none;
+  }
+  77.3% {
+    -webkit-transform: skewX(15deg);
+            transform: skewX(15deg);
+  }
+  77.6% {
+    -webkit-transform: skewX(-15deg);
+            transform: skewX(-15deg);
+  }
+  77.9% {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
 .u-margin__feature--title {
-  margin-top: 4vh;
+  margin-top: 8vh;
 }
 .u-margin__feature--text {
   margin: auto;
-  margin-top: 8vh;
+  margin-top: 4vh;
 }
 .u-margin__term {
   margin-top: 4vh;

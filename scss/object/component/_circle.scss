@@ -20,8 +20,15 @@
    }
 
    &__principal--about {
-      @extend .c-circle__principal;
-      background-color: rgba($color: #740A00, $alpha: 0.5);
+      width              : 70vh;
+      height             : 70vh;
+      background-image   : url(../../../images/circle.svg);
+      background-position: center;
+      background-repeat  : no-repeat;
+      background-color   : rgba($color: black, $alpha: 0.3);
+      border-radius       : 35vh;
+      // @extend .c-circle__principal;
+      // background-color: rgba($color: #740A00, $alpha: 0.5);
    }
 
    &__principal--skill {

@@ -1,4 +1,4 @@
-let angle1 = 30;
+let angle1 = 0;
 
 const circumference = (hhh) => {
     let moveElement = document.querySelector('.p-area__front-menu--lv1');
@@ -36,7 +36,7 @@ const circumference2 = (hhh) => {
 let angle3 = 270;
 const circumference3= (hhh) => {
     let moveElement = document.querySelector('.p-area__front-menu--lv3');
-    //0.7は円の大きさ(0.7vh)→円の半径
+    //0.7は円の大きさ(70vh)→円の半径
     let radius = (hhh * 0.7) / 2;
     //0.14はmenuの円の大きさ(14vh)
     let centerX = radius - ((hhh*0.14)/2);
@@ -62,7 +62,7 @@ setInterval(() => {
     circumference(window_h);
     circumference2(window_h);
     circumference3(window_h);
-},100);
+},1000);
 
 
 // const screenSize = (w, h) => {
