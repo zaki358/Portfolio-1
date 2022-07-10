@@ -46,7 +46,12 @@
       justify-content: center;
       align-items    : center;
       position       : relative;
-      &--img {margin: auto;}
+      &--img {
+         margin: auto;
+         width        : 400px;
+         height       : 400px;
+         
+      }
       &--title {
          width    : 300px;
          position : absolute;

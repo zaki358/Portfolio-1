@@ -1,4 +1,4 @@
-let angle1 = 0;
+let angle1 = 30;
 
 const circumference = (hhh) => {
     let moveElement = document.querySelector('.p-area__front-menu--lv1');
@@ -56,13 +56,20 @@ const circumference3= (hhh) => {
 
 
 
-
-setInterval(() => {
-    let window_h = window.innerHeight;
+document.addEventListener("DOMContentLoaded",function(){
+   let window_h = window.innerHeight;
     circumference(window_h);
     circumference2(window_h);
     circumference3(window_h);
-},1000);
+});
+
+
+// setInterval(() => {
+//     let window_h = window.innerHeight;
+//     circumference(window_h);
+//     circumference2(window_h);
+//     circumference3(window_h);
+// },1000);
 
 
 // const screenSize = (w, h) => {

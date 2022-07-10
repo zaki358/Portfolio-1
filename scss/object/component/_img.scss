@@ -6,8 +6,9 @@
       width : 14px;
    }
    &__swiper {
-      width        : 400px;
-      height       : 400px;
+      object-fit   : contain;
+      width        : auto;
+      height       : 100%;
       border-radius: 50%;
    }
 }
