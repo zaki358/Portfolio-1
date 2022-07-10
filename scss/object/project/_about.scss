@@ -79,16 +79,36 @@
    &__center {
       position: relative;
       ul {
-         display: none;
+         display: block;
       }
    }
-   &__icon--html {}
-   &__icon--css {}
-   &__icon--js {}
-   &__icon--ws {}
-   &__icon--ai {}
-   &__icon--ps {}
-   &__icon--xd {}
-   &__icon--figma {}
+   &__icon--html {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      opacity: 0;
+      transition: opacity 3s;
+   }
+   &__icon--css {
+      @extend .p-about__icon--html;
+   }
+   &__icon--js {
+      @extend .p-about__icon--html;
+   }
+   &__icon--wp {
+      @extend .p-about__icon--html;
+   }
+   &__icon--ai {
+      @extend .p-about__icon--html;
+   }
+   &__icon--ps {
+      @extend .p-about__icon--html;
+   }
+   &__icon--xd {
+      @extend .p-about__icon--html;
+   }
+   &__icon--figma {
+      @extend .p-about__icon--html;
+   }
 
 }
