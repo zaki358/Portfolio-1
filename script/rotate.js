@@ -168,16 +168,20 @@ let time = 3000;
 
 
 
-const scrollEvent = function () {
-   window.addEventListener("wheel", function () {
-       // ここに処理を書いていく
-       requestAnimationFrame(update1);
+window.addEventListener('DOMContentLoaded', function(){
+
+   window.addEventListener('wheel', function(){
+      requestAnimationFrame(update1);
       requestAnimationFrame(update2);
       requestAnimationFrame(update3);
    });
-};
+});
 
-scrollEvent();
+          
+
+
+
+
    //window.addEventListener('scroll',function(){
       
    //});
