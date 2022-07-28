@@ -1,7 +1,9 @@
 
 
 document.addEventListener('DOMContentLoaded', function(){
-   const rotate = new ScrollRotate('.p-area__front-menu--lv1', 30);
+   const rotate1 = new ScrollRotate('.p-area__front-menu--lv1', 30);
+   const rotate2 = new ScrollRotate('.p-area__front-menu--lv2', 150);
+   const rotate3 = new ScrollRotate('.p-area__front-menu--lv3', 270);
 });
 
 
@@ -67,64 +69,98 @@ class ScrollRotate {
       let height = window.innerHeight;
          switch (num2) {
             case 30: //30°～150°を移動（制御点は90°）
-               let [startLeft, startTop] = this._positionCalculation(30);
-               let [endLeft, endTop]= this._positionCalculation(150);
-               let [controlLeft, controlTop] = this._positionCalculation(90);
-               controlLeft = ((height * 0.7) / 2) - (height * 0.07);
-               controlTop = (height * 0.7) + (height * 0.07);
-               return [startLeft, startTop, endLeft, endTop, controlLeft, controlTop];
+               let [startLeft30, startTop30] = this._positionCalculation(30);
+               let [endLeft30, endTop30]= this._positionCalculation(150);
+               let [controlLeft30, controlTop30] = this._positionCalculation(90);
+               controlLeft30 = ((height * 0.7) / 2) - (height * 0.07);
+               controlTop30 = (height * 0.7) + (height * 0.07);
+               return [startLeft30, startTop30, endLeft30, endTop30, controlLeft30, controlTop30];
 
             case 150: //30°～150°を移動（制御点は90°）
-               [startLeft, startTop] = this._positionCalculation(150);
-               [endLeft, endTop]= this._positionCalculation(270);
-               [controlLeft, controlTop] = this._positionCalculation(210);
-               controlLeft = controlLeft - (height * 0.14);
-               controlTop = controlTop - (height * 0.14);
-               return [startLeft, startTop, endLeft, endTop, controlLeft, controlTop];
+               let [startLeft150, startTop150] = this._positionCalculation(150);
+               let [endLeft150, endTop150]= this._positionCalculation(270);
+               let [controlLeft150, controlTop150] = this._positionCalculation(210);
+               controlLeft150 = controlLeft150 - (height * 0.14);
+               controlTop150 = controlTop150 - (height * 0.14);
+               return [startLeft150, startTop150, endLeft150, endTop150, controlLeft150, controlTop150];
 
             case 270: //30°～150°を移動（制御点は90°）
-               [startLeft, startTop] = this._positionCalculation(270);
-               [endLeft, endTop]= this._positionCalculation(30);
-               [controlLeft, controlTop] = this._positionCalculation(330);
-               controlLeft = controlLeft + (height * 0.14);
-               controlTop = controlTop - (height * 0.14);
-               return [startLeft, startTop, endLeft, endTop, controlLeft, controlTop];
+               let [startLeft270, startTop270] = this._positionCalculation(270);
+               let [endLeft270, endTop270]= this._positionCalculation(30);
+               let [controlLeft270, controlTop270] = this._positionCalculation(330);
+               controlLeft270 = controlLeft270 + (height * 0.14);
+               controlTop270 = controlTop270 - (height * 0.14);
+               return [startLeft270, startTop270, endLeft270, endTop270, controlLeft270, controlTop270];
          }
    }
+
+
+   // _angleChange() {
+   //    let value = this.el;
+   //       if(value = 30 || 150) {
+   //          value +=120;
+   //       }
+   //       else if (val = 270) {
+   //          value = 30;
+   //       }
+   //       console.log(value);
+   //       return value;
+   //    }
 
 
    _animation() {
-      let progress = 0;
-      let time = 3000;
-      let [startX, startY, endX, endY, controlX, controlY] = this._movePosition(this.angle);
-      let els = this.el;
-
-
+      const els = this.el;
+      let keepAngle = this. angle;
+      const time = 1500;
+      let start;
+      const _this = this;
+      
+      const rotation = keep()
 
       window.addEventListener("mousewheel", function(){
-         //let aaa = 0;
-         requestAnimationFrame(update);
-         function update(timestamp) {
-            //timestamp = aaa;
-            progress = aaa / time;
-            progress = Math.min(progress, 1);
-            if (progress >= 0) {
-               console.log(progress);
-               let tp = 1 - progress;
-               let moveLeft = (tp ** 2 * startX) + (2 * tp * progress * controlX) + (progress ** 2 * endX);
-               let moveTop = (tp ** 2 * startY) + (2 * tp * progress * controlY) + (progress ** 2 * endY);
-               els.style.left = moveLeft + "px";
-               els.style.top = moveTop+ "px";
-            }
-            if (progress < 1){
-               requestAnimationFrame(update);
-            }
+         start = undefined;
+         rotation();
+   });
+
+   function keep() {
+      
+      function update (timestamp)  {
+         let [startX, startY, endX, endY, controlX, controlY] = _this._movePosition(keepAngle);
+         if (start === undefined) {
+            start = timestamp;
          }
-         //
-      });
+         const elapsed = start ? timestamp - start : 0;
+         //console.log(start);
+         const progress = Math.min(1, elapsed / time);
+         let tp = 1 - progress;
+         let moveLeft = (tp ** 2 * startX) + (2 * tp * progress * controlX) + (progress ** 2 * endX);
+         let moveTop = (tp ** 2 * startY) + (2 * tp * progress * controlY) + (progress ** 2 * endY);
+         els.style.left = moveLeft + "px";
+         els.style.top = moveTop+ "px";
+         if (progress < 1){
+            requestAnimationFrame(update);
+         }
+         else if (progress === 1) {
+            switch(keepAngle) {
+               case 30:
+                  keepAngle += 120;
+                  break
+               case 150:
+                  keepAngle += 120;
+                  break
+               case 270:
+                  keepAngle = 30;
+                  break
+            }
+            console.log(keepAngle);
+         }
+      }
+      return update;
+   }
+      
 
    }
-};
+}
       // window.addEventListener("wheel", function(){
       //    function update(timestamp) {
       //       progress = timestamp / time;
