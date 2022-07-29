@@ -67,54 +67,61 @@ class ScrollRotate {
    //移動位置設定
    _movePosition(num2) {
       let height = window.innerHeight;
-         switch (num2) {
-            case 30: //30°～150°を移動（制御点は90°）
-               let [startLeft30, startTop30] = this._positionCalculation(30);
-               let [endLeft30, endTop30]= this._positionCalculation(150);
-               let [controlLeft30, controlTop30] = this._positionCalculation(90);
-               controlLeft30 = ((height * 0.7) / 2) - (height * 0.07);
-               controlTop30 = (height * 0.7) + (height * 0.07);
-               return [startLeft30, startTop30, endLeft30, endTop30, controlLeft30, controlTop30];
+      let endNum = num2 + 120;
+      let controlNum = num2 + 60;
+      let [startLeft, startTop] = this._positionCalculation(num2);
+      let [endLeft, endTop]= this._positionCalculation(endNum);
+      let [controlLeft, controlTop] = this._positionCalculation(controlNum);
+      switch (num2) {
+         case 30:
+            controlLeft = ((height * 0.7) / 2) - (height * 0.07);
+            controlTop = (height * 0.7) + (height * 0.07);
+            break;
+         case 150:
+            controlLeft = controlLeft - (height * 0.14);
+            controlTop = controlTop - (height * 0.14);
+            break;
+         case 270:
+            controlLeft = controlLeft + (height * 0.14);
+            controlTop = controlTop - (height * 0.14);
+            break;
+      }
+      return[startLeft, startTop, endLeft, endTop, controlLeft, controlTop];
 
-            case 150: //30°～150°を移動（制御点は90°）
-               let [startLeft150, startTop150] = this._positionCalculation(150);
-               let [endLeft150, endTop150]= this._positionCalculation(270);
-               let [controlLeft150, controlTop150] = this._positionCalculation(210);
-               controlLeft150 = controlLeft150 - (height * 0.14);
-               controlTop150 = controlTop150 - (height * 0.14);
-               return [startLeft150, startTop150, endLeft150, endTop150, controlLeft150, controlTop150];
 
-            case 270: //30°～150°を移動（制御点は90°）
-               let [startLeft270, startTop270] = this._positionCalculation(270);
-               let [endLeft270, endTop270]= this._positionCalculation(30);
-               let [controlLeft270, controlTop270] = this._positionCalculation(330);
-               controlLeft270 = controlLeft270 + (height * 0.14);
-               controlTop270 = controlTop270 - (height * 0.14);
-               return [startLeft270, startTop270, endLeft270, endTop270, controlLeft270, controlTop270];
-         }
+         // switch (num2) {
+         //    case 30: //30°～150°を移動（制御点は90°）
+         //       let [startLeft30, startTop30] = this._positionCalculation(30);
+         //       let [endLeft30, endTop30]= this._positionCalculation(150);
+         //       let [controlLeft30, controlTop30] = this._positionCalculation(90);
+         //       controlLeft30 = ((height * 0.7) / 2) - (height * 0.07);
+         //       controlTop30 = (height * 0.7) + (height * 0.07);
+         //       return [startLeft30, startTop30, endLeft30, endTop30, controlLeft30, controlTop30];
+
+         //    case 150: //30°～150°を移動（制御点は90°）
+         //       let [startLeft150, startTop150] = this._positionCalculation(150);
+         //       let [endLeft150, endTop150]= this._positionCalculation(270);
+         //       let [controlLeft150, controlTop150] = this._positionCalculation(210);
+         //       controlLeft150 = controlLeft150 - (height * 0.14);
+         //       controlTop150 = controlTop150 - (height * 0.14);
+         //       return [startLeft150, startTop150, endLeft150, endTop150, controlLeft150, controlTop150];
+
+         //    case 270: //30°～150°を移動（制御点は90°）
+         //       let [startLeft270, startTop270] = this._positionCalculation(270);
+         //       let [endLeft270, endTop270]= this._positionCalculation(30);
+         //       let [controlLeft270, controlTop270] = this._positionCalculation(330);
+         //       controlLeft270 = controlLeft270 + (height * 0.14);
+         //       controlTop270 = controlTop270 - (height * 0.14);
+         //       return [startLeft270, startTop270, endLeft270, endTop270, controlLeft270, controlTop270];
+         // }
    }
-
-
-   // _angleChange() {
-   //    let value = this.el;
-   //       if(value = 30 || 150) {
-   //          value +=120;
-   //       }
-   //       else if (val = 270) {
-   //          value = 30;
-   //       }
-   //       console.log(value);
-   //       return value;
-   //    }
-
 
    _animation() {
       const els = this.el;
-      let keepAngle = this. angle;
-      const time = 1500;
-      let start;
       const _this = this;
-      
+      const time = 1500;
+      let keepAngle = this. angle;
+      let start;
       const rotation = keep()
 
       window.addEventListener("mousewheel", function(){
@@ -161,68 +168,3 @@ class ScrollRotate {
 
    }
 }
-      // window.addEventListener("wheel", function(){
-      //    function update(timestamp) {
-      //       progress = timestamp / time;
-      //       progress = Math.min(progress, 1);
-      //       if (progress >= 0) {
-      //          console.log(progress);
-      //          let tp = 1 - progress;
-      //          let moveLeft = (tp ** 2 * startX) + (2 * tp * progress * controlX) + (progress ** 2 * endX);
-      //          let moveTop = (tp ** 2 * startY) + (2 * tp * progress * controlY) + (progress ** 2 * endY);
-      //          els.style.left = moveLeft + "px";
-      //          els.style.top = moveTop+ "px";
-      //       }
-      //       if (progress < 1){
-      //          requestAnimationFrame(update);
-      //       }
-      //    }
-      //    requestAnimationFrame(update);
-      // });
-   
-
-
-
-
-
-
-
-
-// //270-30
-// const pointA = function () {
-//    let x = left30;
-//    let y = (window_h * 0.7) / 4;
-   
-//    return {
-//       left:x,
-//       top:y
-//    }
-// }
-
-// //30-150
-// const pointB = function () {
-//    let x = left30;
-//    let y = (window_h * 0.7);
-   
-//    return {
-//       left:x,
-//       top:y
-//    }
-// }
-
-// //150-270
-// const pointC = function () {
-//    let x = left30;
-//    let y = (window_h * 0.7) / 4;
-
-//    return {
-//       left:x,
-//       top:y
-//    }
-// }
-
-// const leftA = pointA().left;
-// const topA = pointA().top;
-
-// console.log("制御点A",leftA);
-// console.log("制御点A",topA);
