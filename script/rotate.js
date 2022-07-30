@@ -18,8 +18,6 @@ class ScrollRotate {
    constructor(el, angle) {
       this.el = document.querySelector(el);
       this.angle = angle;
-      //this.callback = callback;
-      
       this._initialPosition();
       this._animation();
 
@@ -36,7 +34,6 @@ class ScrollRotate {
       //算出
       let positionLeft = Math.cos(Math.PI / 180 * angle) * radius + centerLeft;
       let positionTop = Math.sin(Math.PI / 180 * angle) * radius + centerTop;
-   
       return [positionLeft, positionTop];
    }
 
@@ -53,8 +50,6 @@ class ScrollRotate {
       let moveTop = (tp ** 2 * startY) + (2 * tp * t * controlY) + (t ** 2 * endY );
       return moveTop
    };
-
-
 
    //ページ読み込んだ後の初期位置
    _initialPosition() {
@@ -87,38 +82,15 @@ class ScrollRotate {
             break;
       }
       return[startLeft, startTop, endLeft, endTop, controlLeft, controlTop];
-
-
-         // switch (num2) {
-         //    case 30: //30°～150°を移動（制御点は90°）
-         //       let [startLeft30, startTop30] = this._positionCalculation(30);
-         //       let [endLeft30, endTop30]= this._positionCalculation(150);
-         //       let [controlLeft30, controlTop30] = this._positionCalculation(90);
-         //       controlLeft30 = ((height * 0.7) / 2) - (height * 0.07);
-         //       controlTop30 = (height * 0.7) + (height * 0.07);
-         //       return [startLeft30, startTop30, endLeft30, endTop30, controlLeft30, controlTop30];
-
-         //    case 150: //30°～150°を移動（制御点は90°）
-         //       let [startLeft150, startTop150] = this._positionCalculation(150);
-         //       let [endLeft150, endTop150]= this._positionCalculation(270);
-         //       let [controlLeft150, controlTop150] = this._positionCalculation(210);
-         //       controlLeft150 = controlLeft150 - (height * 0.14);
-         //       controlTop150 = controlTop150 - (height * 0.14);
-         //       return [startLeft150, startTop150, endLeft150, endTop150, controlLeft150, controlTop150];
-
-         //    case 270: //30°～150°を移動（制御点は90°）
-         //       let [startLeft270, startTop270] = this._positionCalculation(270);
-         //       let [endLeft270, endTop270]= this._positionCalculation(30);
-         //       let [controlLeft270, controlTop270] = this._positionCalculation(330);
-         //       controlLeft270 = controlLeft270 + (height * 0.14);
-         //       controlTop270 = controlTop270 - (height * 0.14);
-         //       return [startLeft270, startTop270, endLeft270, endTop270, controlLeft270, controlTop270];
-         // }
    }
 
    _animation() {
-      const els = this.el;
       const _this = this;
+      const els = this.el;
+      const elText = els.textContent;
+      const mainEl = document.querySelector(".p-area__main");
+      const elLink = els.firstElementChild.href;
+      let mainLink = mainEl.firstChild.href;
       const time = 1500;
       let keepAngle = this. angle;
       let start;
@@ -158,6 +130,13 @@ class ScrollRotate {
                case 270:
                   keepAngle = 30;
                   break
+            }
+            if (keepAngle === 270) {
+               mainEl.firstElementChild.textContent = elText;
+               mainLink = elLink;
+               console.log(mainLink);
+               console.log(mainEl.firstElementChild);
+               mainEl.firstElementChild.setAttribute("href", mainLink);
             }
             console.log(keepAngle);
          }
