@@ -1,18 +1,8 @@
-
-
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', function () {
    const rotate1 = new ScrollRotate('.p-area__front-menu--lv1', 30);
    const rotate2 = new ScrollRotate('.p-area__front-menu--lv2', 150);
    const rotate3 = new ScrollRotate('.p-area__front-menu--lv3', 270);
 });
-
-
-// window.addEventListener('wheel', function(){
-//    const aaa = new ScrollRotate('.p-area__front-menu--lv1', 30);
-//    aaa.animation();
-// });
-
-
 
 class ScrollRotate {
    constructor(el, angle) {
@@ -20,7 +10,6 @@ class ScrollRotate {
       this.angle = angle;
       this._initialPosition();
       this._animation();
-
    }
    _positionCalculation(num) {
       let windowHeigh = window.innerHeight;
@@ -36,38 +25,42 @@ class ScrollRotate {
       let positionTop = Math.sin(Math.PI / 180 * angle) * radius + centerTop;
       return [positionLeft, positionTop];
    }
-
    //ベジェ曲線（X:Left)
    _moveCurveLeft(t, startX, endX, controlX) {
       let tp = 1 - t;
-      let moveLeft = (tp ** 2 * startX) + (2 * tp * t * controlX) + (t ** 2 * endX );
+      let moveLeft = (tp ** 2 * startX) + (2 * tp * t * controlX) + (t ** 2 * endX);
       return moveLeft
    };
-
    //ベジェ曲線（Y:Top)
-   _moveCurveTop(t,startY, endY, controlY) {
+   _moveCurveTop(t, startY, endY, controlY) {
       let tp = 1 - t;
-      let moveTop = (tp ** 2 * startY) + (2 * tp * t * controlY) + (t ** 2 * endY );
+      let moveTop = (tp ** 2 * startY) + (2 * tp * t * controlY) + (t ** 2 * endY);
       return moveTop
    };
-
    //ページ読み込んだ後の初期位置
    _initialPosition() {
       let [left, top] = this._positionCalculation(this.angle);
-      console.log(left,top);
+      const mainEl = document.querySelector(".p-area__main");
+      let mainLink = mainEl.firstChild.href;
+      if (this.angle === 270) {
+         mainEl.firstElementChild.textContent = this.el.textContent;
+         mainLink = this.el.firstElementChild.href;
+         mainEl.firstElementChild.setAttribute("href", mainLink);
+      }
+      console.log(mainEl);
+      console.log(left, top);
       this.el.style.left = left + "px";
       this.el.style.top = top + "px";
    }
-
    //移動位置設定
-   _movePosition(num2) {
+   _movePosition(num) {
       let height = window.innerHeight;
-      let endNum = num2 + 120;
-      let controlNum = num2 + 60;
-      let [startLeft, startTop] = this._positionCalculation(num2);
-      let [endLeft, endTop]= this._positionCalculation(endNum);
+      let endNum = num + 120;
+      let controlNum = num + 60;
+      let [startLeft, startTop] = this._positionCalculation(num);
+      let [endLeft, endTop] = this._positionCalculation(endNum);
       let [controlLeft, controlTop] = this._positionCalculation(controlNum);
-      switch (num2) {
+      switch (num) {
          case 30:
             controlLeft = ((height * 0.7) / 2) - (height * 0.07);
             controlTop = (height * 0.7) + (height * 0.07);
@@ -81,9 +74,8 @@ class ScrollRotate {
             controlTop = controlTop - (height * 0.14);
             break;
       }
-      return[startLeft, startTop, endLeft, endTop, controlLeft, controlTop];
+      return [startLeft, startTop, endLeft, endTop, controlLeft, controlTop];
    }
-
    _animation() {
       const _this = this;
       const els = this.el;
@@ -91,59 +83,52 @@ class ScrollRotate {
       const mainEl = document.querySelector(".p-area__main");
       const elLink = els.firstElementChild.href;
       let mainLink = mainEl.firstChild.href;
-      const time = 1500;
-      let keepAngle = this. angle;
+      const time = 1000;
+      let keepAngle = this.angle;
       let start;
       const rotation = keep()
-
-      window.addEventListener("mousewheel", function(){
+      window.addEventListener("mousewheel", function () {
          start = undefined;
          rotation();
-   });
+      });
 
-   function keep() {
-      
-      function update (timestamp)  {
-         let [startX, startY, endX, endY, controlX, controlY] = _this._movePosition(keepAngle);
-         if (start === undefined) {
-            start = timestamp;
-         }
-         const elapsed = start ? timestamp - start : 0;
-         //console.log(start);
-         const progress = Math.min(1, elapsed / time);
-         let tp = 1 - progress;
-         let moveLeft = (tp ** 2 * startX) + (2 * tp * progress * controlX) + (progress ** 2 * endX);
-         let moveTop = (tp ** 2 * startY) + (2 * tp * progress * controlY) + (progress ** 2 * endY);
-         els.style.left = moveLeft + "px";
-         els.style.top = moveTop+ "px";
-         if (progress < 1){
-            requestAnimationFrame(update);
-         }
-         else if (progress === 1) {
-            switch(keepAngle) {
-               case 30:
-                  keepAngle += 120;
-                  break
-               case 150:
-                  keepAngle += 120;
-                  break
-               case 270:
-                  keepAngle = 30;
-                  break
+      function keep() {
+         function update(timestamp) {
+            let [startX, startY, endX, endY, controlX, controlY] = _this._movePosition(keepAngle);
+            if (start === undefined) {
+               start = timestamp;
             }
-            if (keepAngle === 270) {
-               mainEl.firstElementChild.textContent = elText;
-               mainLink = elLink;
-               console.log(mainLink);
-               console.log(mainEl.firstElementChild);
-               mainEl.firstElementChild.setAttribute("href", mainLink);
+            const elapsed = start ? timestamp - start : 0;
+            //console.log(start);
+            const progress = Math.min(1, elapsed / time);
+            let tp = 1 - progress;
+            let moveLeft = (tp ** 2 * startX) + (2 * tp * progress * controlX) + (progress ** 2 * endX);
+            let moveTop = (tp ** 2 * startY) + (2 * tp * progress * controlY) + (progress ** 2 * endY);
+            els.style.left = moveLeft + "px";
+            els.style.top = moveTop + "px";
+            if (progress < 1) {
+               requestAnimationFrame(update);
             }
-            console.log(keepAngle);
+            else if (progress === 1) {
+               switch (keepAngle) {
+                  case 30:
+                     keepAngle += 120;
+                     break
+                  case 150:
+                     keepAngle += 120;
+                     break
+                  case 270:
+                     keepAngle = 30;
+                     break
+               }
+               if (keepAngle === 270) {
+                  mainEl.firstElementChild.textContent = elText;
+                  mainLink = elLink;
+                  mainEl.firstElementChild.setAttribute("href", mainLink);
+               }
+            }
          }
+         return update;
       }
-      return update;
-   }
-      
-
    }
 }
