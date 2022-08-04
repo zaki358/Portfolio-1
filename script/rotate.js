@@ -54,9 +54,9 @@ class ScrollRotate {
    }
    //移動位置設定
    _movePosition(num) {
-      let height = window.innerHeight;
-      let endNum = num + 120;
-      let controlNum = num + 60;
+      const height = window.innerHeight;
+      const endNum = num + 120;
+      const controlNum = num + 60;
       let [startLeft, startTop] = this._positionCalculation(num);
       let [endLeft, endTop] = this._positionCalculation(endNum);
       let [controlLeft, controlTop] = this._positionCalculation(controlNum);

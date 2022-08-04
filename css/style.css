@@ -198,9 +198,11 @@ body {
   font-weight: 500;
 }
 .c-font__feature--text {
-  font-family: "Shippori Mincho", serif;
+  font-family: ab-nara, sans-serif;
+  font-weight: 400;
+  font-style: normal;
   color: #ffffff;
-  font-size: 2vh;
+  font-size: 2.5vh;
   text-align: start;
 }
 .c-font__swiper {
@@ -217,7 +219,9 @@ body {
   font-size: 3.2rem;
 }
 .c-font__skill-detail {
-  font-family: "Shippori Mincho", serif;
+  font-family: ab-nara, sans-serif;
+  font-weight: 400;
+  font-style: normal;
   color: #ffffff;
   font-size: 2vh;
   text-align: start;
@@ -245,7 +249,9 @@ body {
   margin: auto;
 }
 .c-title__skill-font {
-  font-family: "Shippori Mincho", serif;
+  font-family: ab-nara, sans-serif;
+  font-weight: 400;
+  font-style: normal;
   color: #ffffff;
   font-size: 5vh;
   font-weight: bold;
