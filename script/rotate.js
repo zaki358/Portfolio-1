@@ -87,7 +87,8 @@ class ScrollRotate {
       let keepAngle = this.angle;
       let start;
       const rotation = keep()
-      window.addEventListener("mousewheel", function () {
+      window.addEventListener("mousewheel", function (e) {
+         console.log(e);
          start = undefined;
          rotation();
       });
