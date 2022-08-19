@@ -8,18 +8,25 @@
    <meta name="description" content="portfolio">
    <title>portfolio</title>
    <script src="../script/pace.js"></script>
+   
    <link rel="stylesheet" href="../css/style.css">
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&display=swap"
       rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
-   
-   <!-- <link rel="stylesheet" href="../scss/object/utility/_loder.scss"> -->
+   <link rel="stylesheet" href="../scss/object/utility/_loder.scss">
 </head>
 
 <body>
-   <div id="l-container">
+   
+   <!-- ページ偏移 -->
+   <div class="deviation">
+      <div class="deviation__main"></div>
+      <p class="deviation__icon--eye"></p>
+   </div>
+
+   <div id="l-container__home">
       <header id="l-header">
          <a class="p-header__link--front" href="front-page.html">
             <img src="" class="p-header__logo c-logo--top" alt="ロゴ用画像">
@@ -76,6 +83,7 @@
          </div>
       </main>
    </div>
+   <script src="../script/loder.js"></script>
    <script src="../script/rotate.js"></script>
    <script src="../dist/bundle.js"></script>
 </body>

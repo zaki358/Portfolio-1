@@ -110,7 +110,7 @@ body {
   height: 100%;
 }
 
-#l-container {
+#l-container, body.appear #l-container__home {
   background-image: url(../../images/container_background-image-pc.jpg);
   background-size: cover;
   background-position: center;
@@ -119,7 +119,44 @@ body {
   min-width: 374px;
   min-height: 666px;
 }
+#l-container__home {
+  opacity: 0;
+}
 
+body.appear #l-container__home {
+  -webkit-animation-name: PageAnimeAppear;
+          animation-name: PageAnimeAppear;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes PageAnimeAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes PageAnimeAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 #l-header {
   height: 70px;
   margin-bottom: 6vh;
@@ -1089,6 +1126,157 @@ body {
   77.9% {
     -webkit-transform: none;
             transform: none;
+  }
+}
+.deviation {
+  display: none;
+}
+
+body.appear .deviation {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+body.appear .deviation::before {
+  left: 0;
+  clip: rect(0px 50vw 100vh 0px);
+  -webkit-animation-name: fadeInAnimeLeft;
+          animation-name: fadeInAnimeLeft;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+body.appear .deviation::after {
+  right: 0;
+  clip: rect(0px 100vw 100vh 50vw);
+  -webkit-animation-name: fadeInAnimeRight;
+          animation-name: fadeInAnimeRight;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+body.appear .deviation::before, body.appear .deviation::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../images/deviation/husuma.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 100;
+  overflow: hidden;
+}
+body.appear .deviation__main {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../images/deviation/husuma2.jpg);
+  background-size: 100%;
+  z-index: 10;
+}
+body.appear .deviation__icon--eye {
+  width: 100px;
+  height: 100px;
+  background: url(imges/icon.jpg) no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 11;
+  -webkit-animation-name: animeOpacity;
+          animation-name: animeOpacity;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeInAnimeLeft {
+  from {
+    -webkit-transform: translate(-30, 0);
+            transform: translate(-30, 0);
+  }
+  to {
+    -webkit-transform: translate(-100px, 0);
+            transform: translate(-100px, 0);
+  }
+}
+
+@keyframes fadeInAnimeLeft {
+  from {
+    -webkit-transform: translate(-30, 0);
+            transform: translate(-30, 0);
+  }
+  to {
+    -webkit-transform: translate(-100px, 0);
+            transform: translate(-100px, 0);
+  }
+}
+@-webkit-keyframes fadeInAnimeRight {
+  from {
+    -webkit-transform: translate(30, 0);
+            transform: translate(30, 0);
+  }
+  to {
+    -webkit-transform: translate(100px, 0);
+            transform: translate(100px, 0);
+  }
+}
+@keyframes fadeInAnimeRight {
+  from {
+    -webkit-transform: translate(30, 0);
+            transform: translate(30, 0);
+  }
+  to {
+    -webkit-transform: translate(100px, 0);
+            transform: translate(100px, 0);
+  }
+}
+@-webkit-keyframes animeOpacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes animeOpacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 .u-margin__feature--title {
