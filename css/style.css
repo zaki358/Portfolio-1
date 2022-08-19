@@ -235,7 +235,7 @@ body.appear #l-container__home {
   font-weight: 500;
 }
 .c-font__feature--text {
-  font-family: ab-nara, sans-serif;
+  font-family: shinryu, sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #ffffff;
@@ -256,7 +256,7 @@ body.appear #l-container__home {
   font-size: 3.2rem;
 }
 .c-font__skill-detail {
-  font-family: ab-nara, sans-serif;
+  font-family: shinryu, sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #ffffff;
@@ -286,7 +286,7 @@ body.appear #l-container__home {
   margin: auto;
 }
 .c-title__skill-font {
-  font-family: ab-nara, sans-serif;
+  font-family: kokuryu, sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #ffffff;

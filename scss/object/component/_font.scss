@@ -27,7 +27,7 @@
       font-weight: 500;
    }
    &__feature--text {
-      @include mixin.fontWhite;
+      @include mixin.fontWhiteText;
       font-size : 2.5vh;
       text-align: start;
    }
@@ -44,7 +44,7 @@
       font-size: 3.2rem;
    }
    &__skill-detail {
-      @include mixin.fontWhite;
+      @include mixin.fontWhiteText;
       font-size : 2.0vh;
       text-align: start;
       width     : 50vh;

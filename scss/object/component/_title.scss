@@ -17,7 +17,7 @@
       margin: auto;
    }
    &__skill-font {
-      @include mixin.fontWhite;
+      @include mixin.fontWhiteTitle;
       font-size  : 5vh;
       font-weight: bold;
       text-align : center;
