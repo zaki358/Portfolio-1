@@ -19,7 +19,7 @@ body.appear #l-container__home{
 	//opacity: 0;
    @include mixin.animation(
          $name: PageAnimeAppear,
-         $duration: 5s,
+         $duration: 3s,
          $delay: 0.8s
       );
 }
