@@ -275,7 +275,10 @@
 				this.el.className = "pace pace-active";
 				document.body.className = document.body.className.replace(/(pace-done )|/, 'pace-running ');
 				var _custom_class_name = (options.className !== '') ? ' '+options.className : '';
-				this.el.innerHTML = '<div class="pace-progress'+_custom_class_name+'">\n  <div class="pace-progress-inner"></div>\n</div>\n<div class="pace-activity"></div>';
+            //タグ追加する場合
+				this.el.innerHTML = '<div class="pace-progress'+_custom_class_name+'">\n  <div class="pace-progress-inner">\n\
+            <div class="loader">\n<div class="loader__bar"></div>\n<div class="loader__bar"></div>\n<div class="loader__bar"></div>\n<div class="loader__bar"></div>\n<div class="loader__bar"></div>\n<div class="loader__ball"></div>\n</div>\
+            </div>\n</div>\n<div class="pace-activity"></div>';
 				if (targetElement.firstChild != null) {
 					targetElement.insertBefore(this.el, targetElement.firstChild);
 				} else {
@@ -984,3 +987,4 @@
 	}
 
 }).call(this);
+

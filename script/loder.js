@@ -3,7 +3,7 @@ const body = document.querySelector("body");
 
 window.addEventListener("load", function () {
    window.setTimeout(function () {
-      console.log(body);
+      //console.log(body);
       body.classList.add("appear");
       window.setTimeout(function () {
          deviation.style.display = "none";
@@ -12,6 +12,8 @@ window.addEventListener("load", function () {
    }, 500);
 
 })
+
+
 
 
 
