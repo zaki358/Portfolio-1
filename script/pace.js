@@ -277,7 +277,7 @@
 				var _custom_class_name = (options.className !== '') ? ' '+options.className : '';
             //タグ追加する場合
 				this.el.innerHTML = '<div class="pace-progress'+_custom_class_name+'">\n  <div class="pace-progress-inner">\n\
-            <div class="loader">\n<div class="loader__bar"></div>\n<div class="loader__bar"></div>\n<div class="loader__bar"></div>\n<div class="loader__bar"></div>\n<div class="loader__bar"></div>\n<div class="loader__ball"></div>\n</div>\
+            <div class="loader">\n<div class="loader__orbit"></div>\n<div class="loader__circle"></div>\
             </div>\n</div>\n<div class="pace-activity"></div>';
 				if (targetElement.firstChild != null) {
 					targetElement.insertBefore(this.el, targetElement.firstChild);

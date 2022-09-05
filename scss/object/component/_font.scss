@@ -39,6 +39,7 @@
       letter-spacing: 4px;
    }
    &__about {
+      display: inline-block;
       cursor: pointer;
       @include mixin.mainRed;
       font-size: 3.2rem;

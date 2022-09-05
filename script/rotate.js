@@ -59,6 +59,7 @@ class ScrollRotate {
       const controlNum = num + 60;
       let [startLeft, startTop] = this._positionCalculation(num);
       let [endLeft, endTop] = this._positionCalculation(endNum);
+      //ベクトル
       let [controlLeft, controlTop] = this._positionCalculation(controlNum);
       switch (num) {
          case 30:
@@ -87,10 +88,18 @@ class ScrollRotate {
       let keepAngle = this.angle;
       let start;
       const rotation = keep()
+
+      let countFlg = false;
       window.addEventListener("mousewheel", function (e) {
          console.log(e);
          start = undefined;
-         rotation();
+         if(!countFlg){
+            rotation();
+            countFlg = true;
+         }
+         setTimeout(function(){
+            countFlg = false;
+         },2000);
       });
 
       function keep() {
@@ -108,6 +117,7 @@ class ScrollRotate {
             els.style.left = moveLeft + "px";
             els.style.top = moveTop + "px";
             if (progress < 1) {
+               countFlg = true;
                requestAnimationFrame(update);
             }
             else if (progress === 1) {

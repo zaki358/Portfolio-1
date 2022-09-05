@@ -10,7 +10,6 @@ window.addEventListener("load", function () {
 
       }, 2000);
    }, 500);
-
 })
 
 
