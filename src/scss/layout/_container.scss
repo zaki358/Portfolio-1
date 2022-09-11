@@ -1,0 +1,33 @@
+@use "../foundation/_mixin.scss";
+
+#l-container {
+  background-image   :url(../../../src/images/common/common_container_background-image-pc.jpg);
+	background-size    :cover;
+	background-position:center;
+	background-repeat  :no-repeat;
+  height             :100vh;
+  min-width          :374px;
+  min-height         :666px;
+
+  //  &__home {
+  //     opacity: 0;
+  //  }
+}
+
+body.appear #l-container__home{
+  @extend #l-container;
+  @include mixin.animation(
+        $name: PageAnimeAppear,
+        $duration: 3s,
+        $delay: 0.8s
+      );
+}
+
+@keyframes PageAnimeAppear{
+	0% {
+	opacity: 0;
+	}
+	100% {
+	opacity: 1;
+}
+}

@@ -1,0 +1,71 @@
+
+.c-icon {
+   &__feature--twitter {
+      box-sizing         : border-box;
+      border-radius      : 35vh;
+      background-image   : url(../../../../src/images/about-page/about_icon_twitter.svg);
+      background-position: center;
+      background-repeat  : no-repeat;
+      background-size    : 110%;
+      opacity            : 0.8;
+      //background-color   :black;
+      //border             : #000000 0.5px solid;
+      //background-blend-mode:lighten;
+   }
+   &__feature--github {
+      @extend .c-icon__feature--twitter;
+      background-image   : url(../../../../src/images/about-page/about_icon_github.svg);
+      background-color   :white;
+   }
+   &__circle {
+      &--html {
+         width              : 10vh;
+         height             : 10vh;
+         box-sizing         : border-box;
+         border             : #000000 0.5px solid;
+         border-radius      : 35vh;
+         background-image   : url(../../../../src/images/skill-page/skill_icon_html-5.svg);
+         background-color   : #000000;
+         background-position: center;
+         background-size    : 60%;
+         background-repeat  : no-repeat;
+      }
+      &--css {
+         @extend .c-icon__circle--html;
+         background-image: url(../../../../src/images/skill-page/skill_icon_css.svg);
+         background-position : center;
+         background-size: 80%
+      }
+      &--js {
+         @extend .c-icon__circle--html;
+         background-image: url(../../../../src/images/skill-page/skill_icon_javascript.svg);
+         background-size : 100%;
+      }
+      &--wp {
+         @extend .c-icon__circle--html;
+         background-image: url(../../../../src/images/skill-page/skill_icon_wordpress-icon.svg);
+         background-size : 100%;
+         background-color: white;
+      }
+      &--ai {
+         @extend .c-icon__circle--html;
+         background-image: url(../../../../src/images/skill-page/skill_icon_illustrator.svg);
+         background-size : 10.5vh;
+      }
+      &--ps {
+         @extend .c-icon__circle--html;
+         background-image: url(../../../../src/images/skill-page/skill_icon_photoshop.svg);
+         background-size : 10.5vh;
+      }
+      &--xd {
+         @extend .c-icon__circle--html;
+         background-image: url(../../../../src/images/skill-page/skill_icon_xd.svg);
+         background-size : 10.5vh;
+      }
+      &--figma {
+         @extend .c-icon__circle--html;
+         background-image: url(../../../../src/images/skill-page/skill_icon_figma.svg);
+         background-size : 100%;
+      }
+   }
+}

@@ -1,0 +1,158 @@
+@use "mixin";
+@use "variables" as val;
+
+.pace-running {
+   background-color: black;
+   width: 100%;
+   height: 100%;
+}
+
+.pace-running  {
+  #l-container__home {
+    opacity: 0 !important;
+  }
+  #l-container {
+    opacity: 0 !important;
+  }
+}
+
+.pace {
+   -webkit-pointer-events: none;
+   pointer-events: none;
+
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   user-select: none;
+
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   -ms-box-sizing: border-box;
+   -o-box-sizing: border-box;
+   box-sizing: border-box;
+
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   border-radius: 10px;
+
+   -webkit-background-clip: padding-box;
+   -moz-background-clip: padding;
+   background-clip: padding-box;
+
+   z-index: 2000;
+   position: fixed;
+   margin: auto;
+   //top: 12px;
+   top: -90px;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   width: 200px;
+   height: 50px;
+   //overflow: hidden;
+}
+
+.pace .pace-progress {
+   transform: none !important;
+   text-align: center;
+   font-size: 2rem;
+   font-family: Helvetica, serif;
+   color: val.$mainColor;
+}
+
+.pace .pace-progress:after {
+   content: attr(data-progress-text);
+   display: block;
+}
+
+
+.pace.pace-inactive {
+   display: none;
+}
+
+.pace-progress-inner {
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   .loader {
+      box-sizing: border-box;
+      height: 60px;
+      width: 60px;
+      position: relative;
+      animation: spinnerAnimation infinite 1500ms ease;
+      &__orbit {
+         box-sizing: border-box;
+         height: 60px;
+         width: 60px;
+         position: absolute;
+         top: 0;
+         left: 0;
+         border-radius: 50%;
+         border: calc(60px * 0.03) solid val.$mainColor;
+      }
+
+      &__circle {
+         box-sizing: border-box;
+         height: 60px;
+         width: 60px;
+         color: val.$mainColor;
+         display: block;
+         border-radius: 50%;
+         position: relative;
+         border: calc(60px * 0.1) solid val.$mainColor;
+         animation: circleAnimation infinite 1500ms ease;
+         transform: rotate(0deg) scale(1);
+      }
+   }
+}
+
+@keyframes spinnerAnimation {
+   0% {
+     transform: rotate(0deg);
+   }
+
+   100% {
+     transform: rotate(360deg);
+   }
+ }
+
+ @keyframes circleAnimation {
+   0% {
+     border-color: transparent;
+     border-top-color: inherit;
+   }
+   16.7% {
+     border-color: transparent;
+     border-top-color: initial;
+     border-right-color: initial;
+   }
+   33.4% {
+     border-color: transparent;
+     border-top-color: inherit;
+     border-right-color: inherit;
+     border-bottom-color: inherit;
+   }
+   50% {
+     border-color: inherit;
+   }
+   62.5% {
+     border-color: inherit;
+   }
+   75% {
+     border-color: inherit;
+     transform: scale(1);
+     opacity: 1;
+   }
+   87.5% {
+     border-color: inherit;
+   }
+   100% {
+     border-color: transparent;
+     border-top-color: inherit;
+   }
+ }
+
+
+
+
+

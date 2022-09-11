@@ -2,94 +2,87 @@
 <html lang="ja">
 
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta name="description" content="portfolio">
-   <title>portfolio</title>
-   <script src="../script/pace.js"></script>
-   <script src="../script/loder2.js"></script>
-   
-   
-   
-   <link rel="stylesheet" href="../css/style.css">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&display=swap"
-      rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
-   <!-- <link rel="stylesheet" href="../scss/object/utility/_loder.scss"> -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="portfolio">
+  <title>portfolio</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
+  <script src="../src/js/libs/pace.js"></script>
 </head>
 
 <body>
-   
-   <!-- ページ偏移 -->
-   <div class="deviation">
-      <div class="deviation__main"></div>
-      <p class="deviation__icon--eye"></p>
-   </div>
 
-   <div id="l-container__home">
-      <header id="l-header">
-         <a class="p-header__link--front" href="front-page.html">
-            <img src="" class="p-header__logo c-logo--top" alt="ロゴ用画像">
-         </a>
-         <nav class="p-header__menu">
-            <ul>
-               <li class="p-header__list">
-                  <a class="c-font__header-menu c-link__header-menu--en" href="page1.html">About</a>
-                  <a class="c-font__header-menu c-link__header-menu--ja" href="page1.html">自己紹介</a>
-               </li>
-               <li class="p-header__list">
-                  <a class="c-font__header-menu c-link__header-menu--en" href="page2.html">Skill</a>
-                  <a class="c-font__header-menu c-link__header-menu--ja" href="page2.html">技能</a>
-               </li>
-               <li class="p-header__list">
-                  <a class="c-font__header-menu c-link__header-menu--en" href="page3.html">Work</a>
-                  <a class="c-font__header-menu c-link__header-menu--ja" href="page3.html">制作実績</a>
-               </li>
+  <!-- ページ偏移 -->
+  <div class="deviation">
+    <div class="deviation__main"></div>
+    <p class="deviation__icon--eye"></p>
+  </div>
+
+  <div id="l-container__home">
+    <header id="l-header">
+      <a class="p-header__link--front" href="front-page.html">
+        <img src="" class="p-header__logo c-logo--top" alt="ロゴ用画像">
+      </a>
+      <nav class="p-header__menu">
+        <ul>
+          <li class="p-header__list">
+            <a class="c-font__header-menu c-link__header-menu--en" href="about.html">About</a>
+            <a class="c-font__header-menu c-link__header-menu--ja" href="about.html">自己紹介</a>
+          </li>
+          <li class="p-header__list">
+            <a class="c-font__header-menu c-link__header-menu--en" href="skill.html">Skill</a>
+            <a class="c-font__header-menu c-link__header-menu--ja" href="skill.html">技能</a>
+          </li>
+          <li class="p-header__list">
+            <a class="c-font__header-menu c-link__header-menu--en" href="work.html">Work</a>
+            <a class="c-font__header-menu c-link__header-menu--ja" href="work.html">制作実績</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="l-main">
+      <!-- <canvas class="p-canvas" id="canvas"></canvas> -->
+      <div class="p-wrapper">
+        <!-- <div class="p-wrapper__layer c-layer-main"></div> -->
+        <div class="p-wrapper__body">
+          <section class="p-area">
+            <h2 class="p-area__main c-circle__main">
+              <a class="c-font__main" href="">力</a>
+            </h2>
+            <ul class="c-circle__principal">
+              <li class="p-area__front-menu--lv1 c-circle__menu">
+                <a class="c-font__main-menu--list" href="about.html">己</a>
+              </li>
+              <li class="p-area__front-menu--lv2 c-circle__menu">
+                <a class="c-font__main-menu--list" href="skill.html">技</a>
+              </li>
+              <li class="p-area__front-menu--lv3  c-circle__menu">
+                <a class="c-font__main-menu--list" href="work.html">仕</a>
+              </li>
             </ul>
-         </nav>
-      </header>
-
-      <main id="l-main">
-         <!-- <canvas class="p-canvas" id="canvas"></canvas> -->
-         <div class="p-wrapper">
-            <!-- <div class="p-wrapper__layer c-layer-main"></div> -->
-            <div class="p-wrapper__body">
-               <section class="p-area">
-                  <h2 class="p-area__main c-circle__main">
-                     <a class="c-font__main" href="">力</a>
-                  </h2>
-                  <ul class="c-circle__principal">
-                     <li class="p-area__front-menu--lv1 c-circle__menu">
-                        <a class="c-font__main-menu--list" href="page1.html">己</a>
-                     </li>
-                     <li class="p-area__front-menu--lv2 c-circle__menu">
-                        <a class="c-font__main-menu--list" href="page2.html">技</a>
-                     </li>
-                     <li class="p-area__front-menu--lv3  c-circle__menu">
-                        <a class="c-font__main-menu--list" href="page3.html">仕</a>
-                     </li>
-                  </ul>
-                  <div class="p-area__scroll">
-                     <img class="p-area__scroll--img c-img__scroll" src="../images/scroll.svg" alt="スクロール画像">
-                     <span class="p-area__scroll--font c-font__scroll">Wheel</span></div>
-               </section>
+            <div class="p-area__scroll">
+              <img class="p-area__scroll--img c-img__scroll" src="../src/images/front-page/front-page_icon_scroll.svg" alt="スクロール画像">
+              <span class="p-area__scroll--font c-font__scroll">Wheel</span>
             </div>
-            <div class="p-wrapper__footer">
-               <ul class="p-wrapper__footer-list">
-                  <li class="c-list__footer"><a class="c-font__footer-menu" href="page4.html">contact</a></li>
-                  <li class="c-list__footer"><a class="c-font__footer-menu" href="page5.html">price</a></li>
-               </ul>
-            </div>
-         </div>
-      </main>
-   </div>
-   <script src="../script/loader.js"></script>
-   
-   <script src="../script/rotate.js"></script>
-   <script src="../dist/bundle.js"></script>
+          </section>
+        </div>
+        <div class="p-wrapper__footer">
+          <ul class="p-wrapper__footer-list">
+            <li class="c-list__footer"><a class="c-font__footer-menu" href="page4.html">contact</a></li>
+            <li class="c-list__footer"><a class="c-font__footer-menu" href="page5.html">price</a></li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script type="module" src="../src/js/main.js"></script>
 </body>
 
 </html>

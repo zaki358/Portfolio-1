@@ -1,0 +1,44 @@
+//円のレイアウト
+@use "../../foundation/_mixin.scss";
+@use "../../foundation/_variables.scss";
+
+.c-circle {
+   &__main {
+      width           : 28vh;
+      height          : 28vh;
+      border          : variables.$mainColor 2px solid;
+      border-radius   : 50%;
+      background-color: rgba($color: variables.$black, $alpha: 0.9);
+   }
+
+   &__principal {
+      width        : 70vh;
+      height       : 70vh;
+      box-sizing   : border-box;
+      border       : #000000 3px solid;
+      border-radius: 35vh;
+   }
+
+   &__principal--about {
+      width              : 70vh;
+      height             : 70vh;
+      background-image   : url(../../../../src/images/about-page/about_main_circle.svg);
+      background-position: center;
+      background-repeat  : no-repeat;
+      background-color   : rgba($color: black, $alpha: 0.3);
+      border-radius       : 35vh;
+      // @extend .c-circle__principal;
+      // background-color: rgba($color: #740A00, $alpha: 0.5);
+   }
+
+   &__principal--skill {
+      @extend .c-circle__principal;
+      background-color: rgba($color: #740A00, $alpha: 0.5);
+   }
+
+   &__menu {
+      @extend .c-circle__main;
+      width : 14vh;
+      height: 14vh;
+   }
+}
